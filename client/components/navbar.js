@@ -1,33 +1,58 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import {logout} from '../store'
 
-const Navbar = ({handleClick, isLoggedIn}) => (
-  <div>
-    <h1>BOILERMAKER</h1>
-    <nav>
-      {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
-        </div>
-      ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
-      )}
-    </nav>
-    <hr />
-  </div>
-)
+class Navbar extends React.Component {
+  componentDidMount() {
+    var elems = document.querySelectorAll('.sidenav')
+    var instances = M.Sidenav.init(elems, {})
+  }
 
+  render() {
+    return (
+      <div>
+        <nav className="nav-extended teal lighten-2">
+          <div className="nav-wrapper">
+            <NavLink strict to="/" className="brand-logo">
+              <i className="large material-icons">fingerprint</i> Vision
+            </NavLink>
+
+            <a href="" data-target="mobile-demo" className="sidenav-trigger">
+              <i className="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
+              <li>
+                <NavLink to="/camera-app">CAMARA</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about">ABOUT</NavLink>
+              </li>
+              <li>
+                <NavLink to="/predictions">PREDICTIONS</NavLink>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <ul className="sidenav" id="mobile-demo">
+          <li>
+            <NavLink to="/home">HOME</NavLink>
+          </li>
+          <li>
+            <NavLink to="/camera-app">CAMARA</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">ABOUT</NavLink>
+          </li>
+          <li>
+            <NavLink to="/predictions">PREDICTIONS</NavLink>
+          </li>
+        </ul>
+      </div>
+    )
+  }
+}
 /**
  * CONTAINER
  */

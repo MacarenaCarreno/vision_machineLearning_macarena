@@ -11,4 +11,13 @@ body {
     margin: 1em;
     display: inline-block; }
 
+.position {
+  position: fixed;
+  top: 30px;
+  left: 0; }
+
+.content {
+  padding: 10px;
+  text-decoration: none; }
+
 /*# sourceMappingURL=style.css.map*/
