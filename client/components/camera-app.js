@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 
 import {precision} from '@tensorflow/tfjs-layers/dist/exports_metrics'
 
+import {addPredictions} from '../store/predictions'
+
 class CameraApp extends React.Component {
   constructor(props) {
     super(props)
@@ -13,7 +15,8 @@ class CameraApp extends React.Component {
       stream: null,
       videoElement: null,
       canvasElement: null,
-      prediction: []
+      prediction: [],
+      myprediction: {}
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -76,11 +79,26 @@ class CameraApp extends React.Component {
   handleClick = async () => {
     let newState = {...this.state}
     newState.prediction = await this.state.model.detect(this.refs.video)
+
+    let myprediction = {
+      title: 'testpred',
+      predictionDetail: []
+    }
+
+    const preddet = newState.prediction.map(pred => {
+      return {
+        class: pred.class,
+        score: pred.score
+      }
+    })
+    myprediction.predictionDetail = preddet
+    newState.myprediction = myprediction
     this.setState(newState)
-    console.log(this.state)
+    this.props.addPredictions(myprediction)
   }
 
   render() {
+    console.log(this.state.prediction)
     return (
       <div className="center-align">
         <div className="container">
@@ -97,7 +115,7 @@ class CameraApp extends React.Component {
             <p />
           </div>
 
-          <div className="row">
+          <div className="row center-aligne">
             <video
               id="videoElement"
               className="position"
@@ -106,7 +124,7 @@ class CameraApp extends React.Component {
               muted
               ref="video"
               width="600"
-              height="500"
+              height="600"
             />
             <canvas
               className="position"
@@ -122,9 +140,11 @@ class CameraApp extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  prediction: state.prediction
+  prediction: state.myprediction
 })
 
-const mapDispatch = dispatch => ({})
+const mapDispatch = dispatch => ({
+  addPredictions: prediction => dispatch(addPredictions(prediction))
+})
 
-export default connect(mapStateToProps)(CameraApp)
+export default connect(mapStateToProps, mapDispatch)(CameraApp)

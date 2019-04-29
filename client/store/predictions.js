@@ -35,9 +35,11 @@ export const getPredictions = () => async dispatch => {
 }
 
 export const addPredictions = newPredictions => async dispatch => {
+  console.log('DATA in STORE', newPredictions)
+
   try {
-    dispatch(loading)
-    const {data} = await axios.post(`/api/prediction/new`, newPredictions)
+    const {data} = await axios.post(`/api/prediction/`, newPredictions)
+
     dispatch(addPrediction(data))
   } catch (err) {
     console.error(err)
@@ -57,7 +59,10 @@ export default function(state = initialState, action) {
     case FETCH_PREDICTIONS:
       return {...state, predictions: action.predictions, loading: false}
     case ADD_PREDICTION:
-      return [...state, action.newPredictions]
+      return {
+        ...state,
+        predictions: [...state.predictions, action.newPredictions]
+      }
     default:
       return state
   }
