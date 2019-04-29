@@ -38,7 +38,7 @@ class Navbar extends React.Component {
         </nav>
         <ul className="sidenav" id="mobile-demo">
           <li>
-            <NavLink to="/home">HOME</NavLink>
+            <NavLink to="/">HOME</NavLink>
           </li>
           <li>
             <NavLink to="/camera-app">CAMARA</NavLink>

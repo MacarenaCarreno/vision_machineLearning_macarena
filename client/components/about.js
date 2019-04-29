@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div>
       {' '}
-      <h3>Project developed with </h3>
+      <h4 className="grey-text">Project developed with </h4>
       <div className="row">
         <div className="col l4 m4 s4">
           <img
@@ -81,6 +81,10 @@ const About = () => {
           <div className="col l2 m2 s2 center-align valign-wrapper" />
         </div>
       </div>{' '}
+      <hr />
+      <h6 className="center-align">
+        by Macarena Carreño | GraceHopper Program{' '}
+      </h6>
     </div>
   )
 }
