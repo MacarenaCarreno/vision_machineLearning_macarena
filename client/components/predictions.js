@@ -5,8 +5,30 @@ import {getPredictions} from '../store/predictions'
 import {PredictionDetails} from './predictionsdetails'
 
 class Predictions extends React.Component {
-  componentDidMount() {
-    this.props.getPredictions()
+  async componentDidMount() {
+    await this.props.getPredictions()
+  }
+
+  formatDate(date) {
+    let d = new Date(date)
+    let curr_date = d.getDate()
+    let curr_month = d.getMonth() + 1 //Months are zero based
+    let curr_year = d.getFullYear()
+    let hour = d.getHours()
+    let min = d.getMinutes()
+
+    let newDate =
+      curr_month +
+      '-' +
+      curr_date +
+      '-' +
+      curr_year +
+      ' ' +
+      hour +
+      ':' +
+      min +
+      ' hr'
+    return newDate
   }
 
   render() {
@@ -20,7 +42,7 @@ class Predictions extends React.Component {
             <tr>
               <th>id </th>
               <th>Date </th>
-              <th>Inventory %Prediction</th>
+              <th>Inventory %Score</th>
             </tr>
           </thead>
 
@@ -29,7 +51,8 @@ class Predictions extends React.Component {
               <tr key={prediction.id}>
                 <td>{prediction.id}</td>
 
-                <td>{prediction.createdAt}</td>
+                <td> {this.formatDate(prediction.createdAt)}</td>
+
                 <td>
                   <ul>
                     <PredictionDetails
@@ -46,6 +69,8 @@ class Predictions extends React.Component {
     )
   }
 }
+
+const fechingData = getPredictions(['FETCH_PREDICTIONS'])
 
 const mapStateToProps = state => ({
   predictions: state.predictions

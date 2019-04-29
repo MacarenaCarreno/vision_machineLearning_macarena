@@ -781,6 +781,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _predictionsdetails__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./predictionsdetails */ "./client/components/predictionsdetails.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -815,20 +819,57 @@ function (_React$Component) {
 
   _createClass(Predictions, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.getPredictions();
+    value: function () {
+      var _componentDidMount = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee() {
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return this.props.getPredictions();
+
+              case 2:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function componentDidMount() {
+        return _componentDidMount.apply(this, arguments);
+      }
+
+      return componentDidMount;
+    }()
+  }, {
+    key: "formatDate",
+    value: function formatDate(date) {
+      var d = new Date(date);
+      var curr_date = d.getDate();
+      var curr_month = d.getMonth() + 1; //Months are zero based
+
+      var curr_year = d.getFullYear();
+      var hour = d.getHours();
+      var min = d.getMinutes();
+      var newDate = curr_month + '-' + curr_date + '-' + curr_year + ' ' + hour + ':' + min + ' hr';
+      return newDate;
     }
   }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
       var predictions = this.props.predictions.predictions;
       console.log(predictions);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Predictions "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         className: "highlight"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Inventory %Prediction"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, predictions.map(function (prediction) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Inventory %Score"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, predictions.map(function (prediction) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: prediction.id
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.createdAt), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_predictionsdetails__WEBPACK_IMPORTED_MODULE_3__["PredictionDetails"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", _this.formatDate(prediction.createdAt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_predictionsdetails__WEBPACK_IMPORTED_MODULE_3__["PredictionDetails"], {
           predictiondetails: prediction.predictiondetails,
           key: prediction.predictiondetails.id
         }))));
@@ -838,6 +879,8 @@ function (_React$Component) {
 
   return Predictions;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var fechingData = Object(_store_predictions__WEBPACK_IMPORTED_MODULE_2__["getPredictions"])(['FETCH_PREDICTIONS']);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
@@ -79016,25 +79059,13 @@ module.exports = yeast;
 
 /***/ }),
 
-/***/ "./public/scss/index.scss":
-/*!********************************!*\
-  !*** ./public/scss/index.scss ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 0:
-/*!************************************************************************!*\
-  !*** multi ./public/scss/index.scss @babel/polyfill ./client/index.js ***!
-  \************************************************************************/
+/*!***********************************************!*\
+  !*** multi @babel/polyfill ./client/index.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./public/scss/index.scss */"./public/scss/index.scss");
 __webpack_require__(/*! @babel/polyfill */"./node_modules/@babel/polyfill/lib/index.js");
 module.exports = __webpack_require__(/*! ./client/index.js */"./client/index.js");
 
