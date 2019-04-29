@@ -125,7 +125,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var About = function About() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Project developed with "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "grey-text"
+  }, "Project developed with "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col l4 m4 s4"
@@ -189,7 +191,9 @@ var About = function About() {
     src: "   http://cocodataset.org/images/coco-logo.png"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col l2 m2 s2 center-align valign-wrapper"
-  }))), ' ');
+  }))), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "center-align"
+  }, "by Macarena Carre\xF1o | GraceHopper Program", ' '));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -717,7 +721,7 @@ function (_React$Component) {
         className: "sidenav",
         id: "mobile-demo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
-        to: "/home"
+        to: "/"
       }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
         to: "/camera-app"
       }, "CAMARA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
@@ -821,10 +825,10 @@ function (_React$Component) {
       console.log(predictions);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Predictions "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         className: "highlight"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Inventory %Prediction"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, predictions.map(function (prediction) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Inventory %Prediction"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, predictions.map(function (prediction) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: prediction.id
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_predictionsdetails__WEBPACK_IMPORTED_MODULE_3__["PredictionDetails"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.createdAt), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_predictionsdetails__WEBPACK_IMPORTED_MODULE_3__["PredictionDetails"], {
           predictiondetails: prediction.predictiondetails,
           key: prediction.predictiondetails.id
         }))));
@@ -1001,6 +1005,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var Routes = function Routes() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    component: _components__WEBPACK_IMPORTED_MODULE_2__["CameraApp"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/camera-app",
     component: _components__WEBPACK_IMPORTED_MODULE_2__["CameraApp"]

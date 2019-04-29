@@ -19,7 +19,7 @@ class Predictions extends React.Component {
           <thead>
             <tr>
               <th>id </th>
-              <th>Name </th>
+              <th>Date </th>
               <th>Inventory %Prediction</th>
             </tr>
           </thead>
@@ -28,7 +28,8 @@ class Predictions extends React.Component {
             {predictions.map(prediction => (
               <tr key={prediction.id}>
                 <td>{prediction.id}</td>
-                <td>{prediction.title}</td>
+
+                <td>{prediction.createdAt}</td>
                 <td>
                   <ul>
                     <PredictionDetails
