@@ -19,11 +19,20 @@ body {
 
   nav a {
     display: inline-block;
-    margin: 1em;
   }
 
   form div {
     margin: 1em;
     display: inline-block;
   }
+}
+
+.position {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
+.content {
+  padding: 10px;
+  text-decoration: none;
 }
