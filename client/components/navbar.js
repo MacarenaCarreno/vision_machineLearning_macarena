@@ -27,10 +27,11 @@ class Navbar extends React.Component {
                 <NavLink to="/camera-app">CAMARA</NavLink>
               </li>
               <li>
-                <NavLink to="/about">ABOUT</NavLink>
-              </li>
-              <li>
                 <NavLink to="/predictions">PREDICTIONS</NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/about">ABOUT</NavLink>
               </li>
             </ul>
           </div>
@@ -42,11 +43,13 @@ class Navbar extends React.Component {
           <li>
             <NavLink to="/camera-app">CAMARA</NavLink>
           </li>
-          <li>
-            <NavLink to="/about">ABOUT</NavLink>
-          </li>
+
           <li>
             <NavLink to="/predictions">PREDICTIONS</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/about">ABOUT</NavLink>
           </li>
         </ul>
       </div>

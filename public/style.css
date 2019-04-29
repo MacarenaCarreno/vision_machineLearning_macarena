@@ -5,8 +5,7 @@ body {
   body label {
     display: block; }
   body nav a {
-    display: inline-block;
-    margin: 1em; }
+    display: inline-block; }
   body form div {
     margin: 1em;
     display: inline-block; }
@@ -14,7 +13,7 @@ body {
 .position {
   position: fixed;
   top: 30px;
-  left: 0; }
+  left: 30px; }
 
 .content {
   padding: 10px;
