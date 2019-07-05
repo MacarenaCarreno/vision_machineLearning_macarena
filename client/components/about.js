@@ -1,86 +1,55 @@
 import React from 'react'
+import {logos, machineLearning} from '../../script/logos.js'
 
 const About = () => {
   return (
     <div>
       {' '}
-      <h4 className="grey-text">Project developed with </h4>
-      <div className="row">
-        <div className="col l4 m4 s4">
-          <img
-            className="materialboxed"
-            data-caption="NodeJS"
-            width="50%"
-            src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png"
-          />
-        </div>
+      <h4 className="grey-text">STACK </h4>
+      <div className="row center-align">
+        <h5>Back end and Front End</h5>
+        <hr />
 
-        <div className="col l4 m4 s4">
-          <img
-            className="materialboxed"
-            data-caption="Postgres"
-            width="50%"
-            src="https://zdnet4.cbsistatic.com/hub/i/r/2018/04/19/092cbf81-acac-4f3a-91a1-5a26abc1721f/resize/370xauto/ce84e38cb1c1a7c5a2c9e4c337e108ba/postgresql-logo.png"
-          />
-        </div>
-
-        <div className="col l4 m4 s4">
-          {' '}
-          <img
-            className="materialboxed"
-            data-caption="JavaScript"
-            width="40%"
-            src="https://www.w3schools.com/whatis/img_js.png"
-          />
-        </div>
-        <div className="col l4 m4 s4">
-          <img
-            className="materialboxed"
-            data-caption="Redux"
-            width="50%"
-            src="https://cdn-images-1.medium.com/max/1600/1*dlapmYAhWBkrFuHm020qlg.png"
-          />
-        </div>
-
-        <div className="col l4 m4 s4">
-          <img
-            className="materialboxed"
-            data-caption="React"
-            width="50%"
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-          />
-        </div>
-
-        <div className="col l4 m4 s4">
-          <img
-            className="materialboxed"
-            data-caption="Materialize"
-            width="50%"
-            src="https://www.brandeps.com/logo-download/M/Materialize-CSS-01.png"
-          />
-        </div>
-
-        <div className="col l12 m12 s12 center-align valign-wrapper">
-          <div className="col l2 m2 s2 center-align valign-wrapper" />
-          <div className="col l4 m4 s4 center-align valign-wrapper">
-            <img
-              className="materialboxed rigth-align"
-              data-caption="TensorFlow"
-              width="50%"
-              src="http://www.freelogovectors.net/wp-content/uploads/2018/07/tensorflow-logo.png"
-            />
+        {logos.map(el => (
+          <div className="col s12 m6 l4 xl4" key={el.id}>
+            <div className="promo promo-example">
+              <img
+                className="center"
+                data-caption={el.name}
+                height="100px"
+                src={el.img}
+              />
+              <div className="center promo promo-example">
+                <p className="promo-caption">{el.name}</p>
+                <p className="light center"> {el.description}</p>
+              </div>
+            </div>
           </div>
-          <div className="col l4 m4 s4 center-align valign-wrapper">
-            <img
-              className="materialboxed left-align valign-wrapper"
-              data-caption="Coco"
-              width="50%"
-              src="   http://cocodataset.org/images/coco-logo.png"
-            />
+        ))}
+      </div>
+      <div className="row center-align">
+        <h5>Machine Learning Tools</h5>
+        <hr />
+
+        {machineLearning.map(el => (
+          <div className="col s12 m6 l6 xl6" key={el.id}>
+            <div className="promo promo-example">
+              <img
+                className="center"
+                data-caption={el.name}
+                height="100px"
+                src={el.img}
+              />
+              <div className="center promo promo-example">
+                <a href={el.link}>
+                  <p className="promo-caption">{el.name}</p>
+                </a>
+                <p className="light center"> {el.description}</p>
+              </div>
+            </div>
           </div>
-          <div className="col l2 m2 s2 center-align valign-wrapper" />
-        </div>
-      </div>{' '}
+        ))}
+      </div>
       <hr />
       <h6 className="center-align">
         by Macarena Carreño | GraceHopper Program{' '}

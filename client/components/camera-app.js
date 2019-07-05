@@ -98,7 +98,6 @@ class CameraApp extends React.Component {
   }
 
   render() {
-    console.log(this.state.prediction)
     return (
       <div className="center-align">
         <div className="container">

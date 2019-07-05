@@ -122,182 +122,61 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _script_logos_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../script/logos.js */ "./script/logos.js");
+
 
 
 var About = function About() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "grey-text"
-  }, "Project developed with "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l4 m4 s4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "materialboxed",
-    "data-caption": "NodeJS",
-    width: "50%",
-    src: "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png"
+  }, "STACK "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row center-align"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Back end and Front End"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), _script_logos_js__WEBPACK_IMPORTED_MODULE_1__["logos"].map(function (el) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "col s12 m6 l4 xl4",
+      key: el.id
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "promo promo-example"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "center",
+      "data-caption": el.name,
+      height: "100px",
+      src: el.img
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "center promo promo-example"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "promo-caption"
+    }, el.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "light center"
+    }, " ", el.description))));
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l4 m4 s4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "materialboxed",
-    "data-caption": "Postgres",
-    width: "50%",
-    src: "https://zdnet4.cbsistatic.com/hub/i/r/2018/04/19/092cbf81-acac-4f3a-91a1-5a26abc1721f/resize/370xauto/ce84e38cb1c1a7c5a2c9e4c337e108ba/postgresql-logo.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l4 m4 s4"
-  }, ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "materialboxed",
-    "data-caption": "JavaScript",
-    width: "40%",
-    src: "https://www.w3schools.com/whatis/img_js.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l4 m4 s4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "materialboxed",
-    "data-caption": "Redux",
-    width: "50%",
-    src: "https://cdn-images-1.medium.com/max/1600/1*dlapmYAhWBkrFuHm020qlg.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l4 m4 s4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "materialboxed",
-    "data-caption": "React",
-    width: "50%",
-    src: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l4 m4 s4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "materialboxed",
-    "data-caption": "Materialize",
-    width: "50%",
-    src: "https://www.brandeps.com/logo-download/M/Materialize-CSS-01.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l12 m12 s12 center-align valign-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l2 m2 s2 center-align valign-wrapper"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l4 m4 s4 center-align valign-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "materialboxed rigth-align",
-    "data-caption": "TensorFlow",
-    width: "50%",
-    src: "http://www.freelogovectors.net/wp-content/uploads/2018/07/tensorflow-logo.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l4 m4 s4 center-align valign-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "materialboxed left-align valign-wrapper",
-    "data-caption": "Coco",
-    width: "50%",
-    src: "   http://cocodataset.org/images/coco-logo.png"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col l2 m2 s2 center-align valign-wrapper"
-  }))), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "row center-align"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Machine Learning Tools"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), _script_logos_js__WEBPACK_IMPORTED_MODULE_1__["machineLearning"].map(function (el) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "col s12 m6 l6 xl6",
+      key: el.id
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "promo promo-example"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "center",
+      "data-caption": el.name,
+      height: "100px",
+      src: el.img
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "center promo promo-example"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: el.link
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "promo-caption"
+    }, el.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "light center"
+    }, " ", el.description))));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     className: "center-align"
   }, "by Macarena Carre\xF1o | GraceHopper Program", ' '));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
-
-/***/ }),
-
-/***/ "./client/components/auth-form.js":
-/*!****************************************!*\
-  !*** ./client/components/auth-form.js ***!
-  \****************************************/
-/*! exports provided: Login, Signup */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Signup", function() { return Signup; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store */ "./client/store/index.js");
-
-
-
-
-/**
- * COMPONENT
- */
-
-var AuthForm = function AuthForm(props) {
-  var name = props.name,
-      displayName = props.displayName,
-      handleSubmit = props.handleSubmit,
-      error = props.error;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: handleSubmit,
-    name: name
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "email"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Email")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    name: "email",
-    type: "text"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "password"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Password")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    name: "password",
-    type: "password"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "submit"
-  }, displayName)), error && error.response && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", error.response.data, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/auth/google"
-  }, displayName, " with Google"));
-};
-/**
- * CONTAINER
- *   Note that we have two different sets of 'mapStateToProps' functions -
- *   one for Login, and one for Signup. However, they share the same 'mapDispatchToProps'
- *   function, and share the same Component. This is a good example of how we
- *   can stay DRY with interfaces that are very similar to each other!
- */
-
-
-var mapLogin = function mapLogin(state) {
-  return {
-    name: 'login',
-    displayName: 'Login',
-    error: state.user.error
-  };
-};
-
-var mapSignup = function mapSignup(state) {
-  return {
-    name: 'signup',
-    displayName: 'Sign Up',
-    error: state.user.error
-  };
-};
-
-var mapDispatch = function mapDispatch(dispatch) {
-  return {
-    handleSubmit: function handleSubmit(evt) {
-      evt.preventDefault();
-      var formName = evt.target.name;
-      var email = evt.target.email.value;
-      var password = evt.target.password.value;
-      dispatch(Object(_store__WEBPACK_IMPORTED_MODULE_3__["auth"])(email, password, formName));
-    }
-  };
-};
-
-var Login = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapLogin, mapDispatch)(AuthForm);
-var Signup = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapSignup, mapDispatch)(AuthForm);
-/**
- * PROP TYPES
- */
-
-AuthForm.propTypes = {
-  name: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  displayName: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  handleSubmit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
-  error: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
 
 /***/ }),
 
@@ -537,7 +416,6 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state.prediction);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "center-align"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -593,7 +471,7 @@ var mapDispatch = function mapDispatch(dispatch) {
 /*!************************************!*\
   !*** ./client/components/index.js ***!
   \************************************/
-/*! exports provided: Navbar, UserHome, Login, Signup, CameraApp, About, Predictions */
+/*! exports provided: Navbar, UserHome, CameraApp, About, Predictions */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -604,26 +482,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user-home */ "./client/components/user-home.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UserHome", function() { return _user_home__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
-/* harmony import */ var _auth_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth-form */ "./client/components/auth-form.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return _auth_form__WEBPACK_IMPORTED_MODULE_2__["Login"]; });
+/* harmony import */ var _camera_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./camera-app */ "./client/components/camera-app.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CameraApp", function() { return _camera_app__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Signup", function() { return _auth_form__WEBPACK_IMPORTED_MODULE_2__["Signup"]; });
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about */ "./client/components/about.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "About", function() { return _about__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
-/* harmony import */ var _camera_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./camera-app */ "./client/components/camera-app.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CameraApp", function() { return _camera_app__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./about */ "./client/components/about.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "About", function() { return _about__WEBPACK_IMPORTED_MODULE_4__["default"]; });
-
-/* harmony import */ var _predictions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./predictions */ "./client/components/predictions.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Predictions", function() { return _predictions__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+/* harmony import */ var _predictions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./predictions */ "./client/components/predictions.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Predictions", function() { return _predictions__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
 /**
  * `components/index.js` exists simply as a 'central export' for our components.
  * This way, we can import all of our components from the same place, rather than
  * having to figure out which file they belong to!
  */
-
 
 
 
@@ -822,7 +694,6 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var predictions = this.props.predictions.predictions;
-      console.log(predictions);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Predictions "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         className: "highlight"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Inventory %Prediction"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, predictions.map(function (prediction) {
@@ -79024,6 +78895,76 @@ module.exports = yeast;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./script/logos.js":
+/*!*************************!*\
+  !*** ./script/logos.js ***!
+  \*************************/
+/*! exports provided: logos, machineLearning */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logos", function() { return logos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "machineLearning", function() { return machineLearning; });
+var logos = [{
+  id: 1,
+  name: 'NodeJs',
+  description: "Node.js\xAE is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+  link: 'https://nodejs.org/en/',
+  img: 'https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png'
+}, {
+  id: 2,
+  name: 'PostgreSQL',
+  description: "PostgreSQL is an open source object-relational database system.",
+  link: 'https://www.postgresql.org/',
+  img: 'https://www.postgresql.org/media/img/about/press/elephant.png'
+}, {
+  id: 3,
+  name: 'Sequelize',
+  description: "Sequelize is a promise-based ORM for Node.js and io.js. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite and MSSQL and features solid transaction support, relations, read replication and more.",
+  link: 'https://sequelize.readthedocs.io/en/v3/',
+  img: 'https://sequelize.readthedocs.io/en/v3/images/logo-small.png'
+}, {
+  id: 4,
+  name: 'JavaScript',
+  description: "Node.js\xAE is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+  link: 'https://www.javascript.com/',
+  img: '/javascript-logo.png'
+}, {
+  id: 5,
+  name: 'React',
+  description: "React is a JavaScript library for building user interfaces.",
+  link: 'https://reactjs.org/',
+  img: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K'
+}, {
+  id: 6,
+  name: 'Redux',
+  description: "Redux is a predictable state container for JavaScript apps.",
+  link: 'https://redux.js.org/',
+  img: 'https://redux.js.org/img/redux.svg'
+}, {
+  id: 7,
+  name: 'Materialize Css',
+  description: "A modern responsive front-end framework based on Material Design",
+  link: 'https://materializecss.com/',
+  img: '/materialize.png'
+}];
+var machineLearning = [{
+  id: 1,
+  name: 'TensorFlow',
+  description: "TensorFlow.js is a library for developing and training ML models in JavaScript, and deploying in browser or on Node.js",
+  link: 'https://www.tensorflow.org/js',
+  img: 'https://www.gstatic.com/devrel-devsite/vb298438d35e34dff3f97c40f057464525beed8d6a3ecb339c274e51019bd45e6/tensorflow/images/lockup.svg'
+}, {
+  id: 2,
+  name: 'Coco-ssd',
+  description: "COCO is a large-scale object detection, segmentation, and captioning dataset.",
+  link: 'http://cocodataset.org/#home',
+  img: 'http://cocodataset.org/images/coco-logo.png'
+}];
 
 /***/ }),
 

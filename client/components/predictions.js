@@ -11,7 +11,6 @@ class Predictions extends React.Component {
 
   render() {
     const {predictions} = this.props.predictions
-    console.log(predictions)
     return (
       <div>
         <h4>Predictions </h4>
