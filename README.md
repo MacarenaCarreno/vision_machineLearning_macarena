@@ -2,13 +2,10 @@
 
 Image Recognition APP. The user shows an element to the camera, the APP predicts the object, press the botton Save and the data will show in predictions.
 
-## Technologies
+* Technologies: NodeJS, Express, PostgreSQL, TensorFlow.js, Coco-SSD,Redux, React, Materialize CSS
 
-NodeJS, Express, PostgreSQL, TensorFlow.js, Coco-SSD,Redux, React, Materialize CSS
-
-## Developed in: 3 Days - 2019
-
-Team: [Grace Hopper Project] > Macarena Carreno
+* Developed in: 3 Days - 2019
+* Team: [Grace Hopper Project] > Macarena Carreno
 
 ## Start
 
