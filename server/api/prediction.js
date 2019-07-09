@@ -31,17 +31,4 @@ router.post('/', async (req, res, next) => {
     next(err)
   }
 })
-
-// {
-//   title: 'newPred',
-//   predictiondetails: [
-//     {
-//     class: "person",
-//     score: 0.99,
-//     },
-//     {
-//     class: "cellphone",
-//     score: 0.89,
-//     }
-//   ]
-// }
+ 

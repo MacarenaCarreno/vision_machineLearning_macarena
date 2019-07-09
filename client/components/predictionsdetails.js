@@ -3,7 +3,6 @@ import React from 'react'
 export const PredictionDetails = props => {
   // const {class, score} = props.predictionsdet
 
-  console.log('DETAILS', props)
   return (
     <ul>
       {props.predictiondetails.map(det => (

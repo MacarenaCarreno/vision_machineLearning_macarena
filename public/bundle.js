@@ -104,16 +104,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Navbar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Navbar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_1__["Footer"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
-/***/ "./client/components/about.js":
+/***/ "./client/components/About.js":
 /*!************************************!*\
-  !*** ./client/components/about.js ***!
+  !*** ./client/components/About.js ***!
   \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -127,7 +127,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var About = function About() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "grey-text"
+  }, "Vision Machine Learning Image Recognition "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "grey-text"
+  }, "A 3 days solo project for Stackathon at GraceHopper - FullStack code Academy", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "grey-text"
   }, "STACK "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row center-align"
@@ -171,119 +179,16 @@ var About = function About() {
     }, el.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "light center"
     }, " ", el.description))));
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    className: "center-align"
-  }, "by Macarena Carre\xF1o | GraceHopper Program", ' '));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
 
 /***/ }),
 
-/***/ "./client/components/auth-form.js":
-/*!****************************************!*\
-  !*** ./client/components/auth-form.js ***!
-  \****************************************/
-/*! exports provided: Login, Signup */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Signup", function() { return Signup; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store */ "./client/store/index.js");
-
-
-
-
-/**
- * COMPONENT
- */
-
-var AuthForm = function AuthForm(props) {
-  var name = props.name,
-      displayName = props.displayName,
-      handleSubmit = props.handleSubmit,
-      error = props.error;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: handleSubmit,
-    name: name
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "email"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Email")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    name: "email",
-    type: "text"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "password"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Password")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    name: "password",
-    type: "password"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "submit"
-  }, displayName)), error && error.response && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", error.response.data, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/auth/google"
-  }, displayName, " with Google"));
-};
-/**
- * CONTAINER
- *   Note that we have two different sets of 'mapStateToProps' functions -
- *   one for Login, and one for Signup. However, they share the same 'mapDispatchToProps'
- *   function, and share the same Component. This is a good example of how we
- *   can stay DRY with interfaces that are very similar to each other!
- */
-
-
-var mapLogin = function mapLogin(state) {
-  return {
-    name: 'login',
-    displayName: 'Login',
-    error: state.user.error
-  };
-};
-
-var mapSignup = function mapSignup(state) {
-  return {
-    name: 'signup',
-    displayName: 'Sign Up',
-    error: state.user.error
-  };
-};
-
-var mapDispatch = function mapDispatch(dispatch) {
-  return {
-    handleSubmit: function handleSubmit(evt) {
-      evt.preventDefault();
-      var formName = evt.target.name;
-      var email = evt.target.email.value;
-      var password = evt.target.password.value;
-      dispatch(Object(_store__WEBPACK_IMPORTED_MODULE_3__["auth"])(email, password, formName));
-    }
-  };
-};
-
-var Login = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapLogin, mapDispatch)(AuthForm);
-var Signup = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapSignup, mapDispatch)(AuthForm);
-/**
- * PROP TYPES
- */
-
-AuthForm.propTypes = {
-  name: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  displayName: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  handleSubmit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
-  error: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-
-/***/ }),
-
-/***/ "./client/components/camera-app.js":
+/***/ "./client/components/Camera-app.js":
 /*!*****************************************!*\
-  !*** ./client/components/camera-app.js ***!
+  !*** ./client/components/Camera-app.js ***!
   \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -292,19 +197,11 @@ AuthForm.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _tensorflow_tfjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @tensorflow/tfjs */ "./node_modules/@tensorflow/tfjs/dist/tf.esm.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _tensorflow_models_coco_ssd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @tensorflow-models/coco-ssd */ "./node_modules/@tensorflow-models/coco-ssd/dist/coco-ssd.esm.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _tensorflow_tfjs_layers_dist_exports_metrics__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @tensorflow/tfjs-layers/dist/exports_metrics */ "./node_modules/@tensorflow/tfjs-layers/dist/exports_metrics.js");
-/* harmony import */ var _tensorflow_tfjs_layers_dist_exports_metrics__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_tensorflow_tfjs_layers_dist_exports_metrics__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _store_predictions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/predictions */ "./client/store/predictions.js");
+/* harmony import */ var _tensorflow_tfjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tensorflow/tfjs */ "./node_modules/@tensorflow/tfjs/dist/tf.esm.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -329,195 +226,108 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-
 var CameraApp =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(CameraApp, _React$Component);
 
-  function CameraApp(props) {
+  function CameraApp() {
+    var _getPrototypeOf2;
+
     var _this;
 
     _classCallCheck(this, CameraApp);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(CameraApp).call(this, props));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
 
-    _defineProperty(_assertThisInitialized(_this), "predictFrame",
-    /*#__PURE__*/
-    _asyncToGenerator(
-    /*#__PURE__*/
-    regeneratorRuntime.mark(function _callee() {
-      var predictions;
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return _this.state.model.detect(_this.refs.video);
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(CameraApp)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-            case 2:
-              predictions = _context.sent;
+    _defineProperty(_assertThisInitialized(_this), "videoRef", react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef());
 
-              _this.drawPredictions(predictions);
+    _defineProperty(_assertThisInitialized(_this), "canvasRef", react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef());
 
-              _this.predictFrame();
+    _defineProperty(_assertThisInitialized(_this), "detectFrame", function (video, model) {
+      model.detect(video).then(function (predictions) {
+        _this.renderPredictions(predictions);
 
-            case 5:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    })));
+        requestAnimationFrame(function () {
+          _this.detectFrame(video, model);
+        });
+      });
+    });
 
-    _defineProperty(_assertThisInitialized(_this), "drawPredictions", function (predictions) {
-      var frame = _this.state.canvasElement.getContext('2d');
+    _defineProperty(_assertThisInitialized(_this), "renderPredictions", function (predictions) {
+      var ctx = _this.canvasRef.current.getContext('2d');
 
-      frame.clearRect(0, 0, frame.canvas.width, frame.canvas.height);
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); // Font options.
+
       var font = '16px sans-serif';
-      frame.font = font;
-      frame.textBaseline = 'top';
+      ctx.font = font;
+      ctx.textBaseline = 'top';
       predictions.forEach(function (prediction) {
         var x = prediction.bbox[0];
         var y = prediction.bbox[1];
         var width = prediction.bbox[2];
-        var height = prediction.bbox[3]; // Draw prediction box.
+        var height = prediction.bbox[3] - 100; // Draw the bounding box.
 
-        frame.strokeStyle = '#e57373';
-        frame.lineWidth = 4;
-        frame.strokeRect(x, y, width, height); // Draw text box.
+        ctx.strokeStyle = '#00FFFF';
+        ctx.lineWidth = 4;
+        ctx.strokeRect(x, y, width, height); // Draw the label background.
 
-        frame.fillStyle = '#b2dfdb';
-        var textWidth = frame.measureText(prediction["class"]).width;
+        ctx.fillStyle = '#00FFFF';
+        var textWidth = ctx.measureText(prediction["class"]).width;
         var textHeight = parseInt(font, 10); // base 10
 
-        var probability = Math.round(prediction.score * 1000) / 1000 * 100;
-        var scoreWidth = frame.measureText(probability).width;
-        frame.fillRect(x, y, textWidth + scoreWidth + 20, textHeight + 4); // Draw text.
+        ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
+      });
+      predictions.forEach(function (prediction) {
+        var x = prediction.bbox[0];
+        var y = prediction.bbox[1]; // Draw the text last to ensure it's on top.
 
-        frame.fillStyle = '#000000';
-        frame.fillText(prediction["class"] + ' ' + probability + '%', x, y);
+        ctx.fillStyle = '#000000';
+        ctx.fillText(prediction["class"], x, y);
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleClick",
-    /*#__PURE__*/
-    _asyncToGenerator(
-    /*#__PURE__*/
-    regeneratorRuntime.mark(function _callee2() {
-      var newState, myprediction, preddet;
-      return regeneratorRuntime.wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              newState = _objectSpread({}, _this.state);
-              _context2.next = 3;
-              return _this.state.model.detect(_this.refs.video);
-
-            case 3:
-              newState.prediction = _context2.sent;
-              myprediction = {
-                title: 'testpred',
-                predictionDetail: []
-              };
-              preddet = newState.prediction.map(function (pred) {
-                return {
-                  "class": pred["class"],
-                  score: pred.score
-                };
-              });
-              myprediction.predictionDetail = preddet;
-              newState.myprediction = myprediction;
-
-              _this.setState(newState);
-
-              _this.props.addPredictions(myprediction);
-
-            case 10:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    })));
-
-    _this.state = {
-      model: null,
-      stream: null,
-      videoElement: null,
-      canvasElement: null,
-      prediction: [],
-      myprediction: {}
-    };
-    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(CameraApp, [{
     key: "componentDidMount",
-    value: function () {
-      var _componentDidMount = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee3() {
-        var stream, model;
-        return regeneratorRuntime.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                _context3.prev = 0;
-                _context3.next = 3;
-                return navigator.mediaDevices.getUserMedia({
-                  video: {
-                    facingMode: 'environment'
-                  },
-                  audio: false
-                });
+    value: function componentDidMount() {
+      var _this2 = this;
 
-              case 3:
-                stream = _context3.sent;
-                _context3.next = 6;
-                return _tensorflow_models_coco_ssd__WEBPACK_IMPORTED_MODULE_2__["load"]();
-
-              case 6:
-                model = _context3.sent;
-                _context3.next = 9;
-                return this.setState({
-                  videoElement: this.refs.video,
-                  canvasElement: this.refs.canvas,
-                  stream: stream,
-                  model: model
-                });
-
-              case 9:
-                this.state.videoElement.srcObject = this.state.stream;
-                this.predictFrame();
-                _context3.next = 16;
-                break;
-
-              case 13:
-                _context3.prev = 13;
-                _context3.t0 = _context3["catch"](0);
-                console.log(_context3.t0);
-
-              case 16:
-              case "end":
-                return _context3.stop();
-            }
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        var webCamPromise = navigator.mediaDevices.getUserMedia({
+          audio: false,
+          video: {
+            facingMode: 'user'
           }
-        }, _callee3, this, [[0, 13]]);
-      }));
-
-      function componentDidMount() {
-        return _componentDidMount.apply(this, arguments);
+        }).then(function (stream) {
+          window.stream = stream;
+          _this2.videoRef.current.srcObject = stream;
+          return new Promise(function (resolve, reject) {
+            _this2.videoRef.current.onloadedmetadata = function () {
+              resolve();
+            };
+          });
+        });
+        var modelPromise = _tensorflow_models_coco_ssd__WEBPACK_IMPORTED_MODULE_2__["load"]();
+        Promise.all([modelPromise, webCamPromise]).then(function (values) {
+          _this2.detectFrame(_this2.videoRef.current, values[0]);
+        })["catch"](function (error) {
+          console.error(error);
+        });
       }
-
-      return componentDidMount;
-    }()
+    }
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state.prediction);
+      var checkVideo = document.getElementsByTagName('video');
+      console.log(checkVideo);
+      console.log(checkVideo[0]);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "center-align"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -525,25 +335,40 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        onClick: this.handleClick,
+        type: "button" // onClick={this.handleClick}
+        ,
         className: "waves-effect waves-light btn "
-      }, "Save Data")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row center-aligne"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
-        id: "videoElement",
+      }, "Save Data")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container-video center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "The model is loading..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "preloader-wrapper big active"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "spinner-layer spinner-blue-only"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "circle-clipper left"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "circle"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "gap-patch"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "circle"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "circle-clipper right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "circle"
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         className: "position",
         autoPlay: true,
         playsInline: true,
         muted: true,
-        ref: "video",
-        width: "600",
-        height: "600"
+        ref: this.videoRef,
+        width: "780",
+        height: "650"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("canvas", {
         className: "position",
-        ref: "canvas",
-        width: "600",
-        height: "500"
+        ref: this.canvasRef,
+        width: "780",
+        height: "650"
       }))));
     }
   }]);
@@ -551,70 +376,60 @@ function (_React$Component) {
   return CameraApp;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    prediction: state.myprediction
-  };
-};
-
-var mapDispatch = function mapDispatch(dispatch) {
-  return {
-    addPredictions: function addPredictions(prediction) {
-      return dispatch(Object(_store_predictions__WEBPACK_IMPORTED_MODULE_5__["addPredictions"])(prediction));
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatch)(CameraApp));
+/* harmony default export */ __webpack_exports__["default"] = (CameraApp);
 
 /***/ }),
 
-/***/ "./client/components/index.js":
-/*!************************************!*\
-  !*** ./client/components/index.js ***!
-  \************************************/
-/*! exports provided: Navbar, UserHome, Login, Signup, CameraApp, About, Predictions */
+/***/ "./client/components/Footer.js":
+/*!*************************************!*\
+  !*** ./client/components/Footer.js ***!
+  \*************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navbar */ "./client/components/navbar.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Navbar", function() { return _navbar__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _user_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user-home */ "./client/components/user-home.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UserHome", function() { return _user_home__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-/* harmony import */ var _auth_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth-form */ "./client/components/auth-form.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return _auth_form__WEBPACK_IMPORTED_MODULE_2__["Login"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Signup", function() { return _auth_form__WEBPACK_IMPORTED_MODULE_2__["Signup"]; });
-
-/* harmony import */ var _camera_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./camera-app */ "./client/components/camera-app.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CameraApp", function() { return _camera_app__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./about */ "./client/components/about.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "About", function() { return _about__WEBPACK_IMPORTED_MODULE_4__["default"]; });
-
-/* harmony import */ var _predictions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./predictions */ "./client/components/predictions.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Predictions", function() { return _predictions__WEBPACK_IMPORTED_MODULE_5__["default"]; });
-
-/**
- * `components/index.js` exists simply as a 'central export' for our components.
- * This way, we can import all of our components from the same place, rather than
- * having to figure out which file they belong to!
- */
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
+var Footer = function Footer() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+    className: "page-footer teal lighten-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col l6 s12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "white-text"
+  }, "Vision"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "grey-text text-lighten-4"
+  }, "Machine Learning Image Recognition")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col l4 offset-l2 s12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "white-text"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "grey-text text-lighten-3",
+    href: "www.macarenacg.com"
+  }, "Macarena Carreno")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "grey-text text-lighten-3",
+    href: "https://github.com/MacarenaCarreno/vision_machineLearning_macarena"
+  }, "GitHub")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer-copyright"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, "\xA9 2019 by Macarena Carreno")));
+};
 
-
-
-
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
 
 /***/ }),
 
-/***/ "./client/components/navbar.js":
+/***/ "./client/components/Navbar.js":
 /*!*************************************!*\
-  !*** ./client/components/navbar.js ***!
+  !*** ./client/components/Navbar.js ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -745,9 +560,9 @@ Navbar.propTypes = {
 
 /***/ }),
 
-/***/ "./client/components/predictions.js":
+/***/ "./client/components/Predictions.js":
 /*!******************************************!*\
-  !*** ./client/components/predictions.js ***!
+  !*** ./client/components/Predictions.js ***!
   \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -758,7 +573,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_predictions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/predictions */ "./client/store/predictions.js");
-/* harmony import */ var _predictionsdetails__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./predictionsdetails */ "./client/components/predictionsdetails.js");
+/* harmony import */ var _Predictionsdetails__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Predictionsdetails */ "./client/components/Predictionsdetails.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -843,13 +658,16 @@ function (_React$Component) {
       var _this = this;
 
       var predictions = this.props.predictions.predictions;
-      console.log(predictions);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Predictions "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        className: "center"
+      }, "Predictions "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         className: "highlight"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Inventory %Score"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, predictions.map(function (prediction) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Date "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Item - %Prediction"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, predictions.map(function (prediction) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: prediction.id
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", _this.formatDate(prediction.createdAt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_predictionsdetails__WEBPACK_IMPORTED_MODULE_3__["PredictionDetails"], {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, prediction.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, " ", _this.formatDate(prediction.createdAt)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Predictionsdetails__WEBPACK_IMPORTED_MODULE_3__["PredictionDetails"], {
           predictiondetails: prediction.predictiondetails,
           key: prediction.predictiondetails.id
         }))));
@@ -880,9 +698,9 @@ var mapDispatch = function mapDispatch(dispatch) {
 
 /***/ }),
 
-/***/ "./client/components/predictionsdetails.js":
+/***/ "./client/components/Predictionsdetails.js":
 /*!*************************************************!*\
-  !*** ./client/components/predictionsdetails.js ***!
+  !*** ./client/components/Predictionsdetails.js ***!
   \*************************************************/
 /*! exports provided: PredictionDetails */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -895,7 +713,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var PredictionDetails = function PredictionDetails(props) {
   // const {class, score} = props.predictionsdet
-  console.log('DETAILS', props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, props.predictiondetails.map(function (det) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: det.id
@@ -905,50 +722,40 @@ var PredictionDetails = function PredictionDetails(props) {
 
 /***/ }),
 
-/***/ "./client/components/user-home.js":
-/*!****************************************!*\
-  !*** ./client/components/user-home.js ***!
-  \****************************************/
-/*! exports provided: UserHome, default */
+/***/ "./client/components/index.js":
+/*!************************************!*\
+  !*** ./client/components/index.js ***!
+  \************************************/
+/*! exports provided: Navbar, Footer, CameraApp, About, Predictions */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserHome", function() { return UserHome; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar */ "./client/components/Navbar.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Navbar", function() { return _Navbar__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer */ "./client/components/Footer.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return _Footer__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
+/* harmony import */ var _Camera_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Camera-app */ "./client/components/Camera-app.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CameraApp", function() { return _Camera_app__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./About */ "./client/components/About.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "About", function() { return _About__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _Predictions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Predictions */ "./client/components/Predictions.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Predictions", function() { return _Predictions__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
 /**
- * COMPONENT
+ * `components/index.js` exists simply as a 'central export' for our components.
+ * This way, we can import all of our components from the same place, rather than
+ * having to figure out which file they belong to!
  */
 
-var UserHome = function UserHome(props) {
-  var email = props.email;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Welcome, ", email));
-};
-/**
- * CONTAINER
- */
 
-var mapState = function mapState(state) {
-  return {
-    email: state.user.email
-  };
-};
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapState)(UserHome));
-/**
- * PROP TYPES
- */
 
-UserHome.propTypes = {
-  email: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
-};
+
 
 /***/ }),
 
@@ -1017,10 +824,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components */ "./client/components/index.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store */ "./client/store/index.js");
 
 
-
+ // import {me} from './store'
 
 /**
  * COMPONENT
@@ -11407,1769 +11213,6 @@ var extendStatics=function(t,e){return(extendStatics=Object.setPrototypeOf||{__p
 
 /***/ }),
 
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/backend/common.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/backend/common.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var tfjs_core_1 = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var _epsilon;
-/**
- * Returns the value of the fuzz factor used in numeric expressions.
- */
-function epsilon() {
-    if (_epsilon == null) {
-        _epsilon = tfjs_core_1.backend().epsilon();
-    }
-    return _epsilon;
-}
-exports.epsilon = epsilon;
-/**
- * Sets the value of the fuzz factor used in numeric expressions.
- * @param e New value of epsilon.
- */
-function setEpsilon(e) {
-    _epsilon = e;
-}
-exports.setEpsilon = setEpsilon;
-/**
- * Returns the default image data format convention.
- */
-function imageDataFormat() {
-    return 'channelsLast';
-}
-exports.imageDataFormat = imageDataFormat;
-//# sourceMappingURL=common.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/backend/tfjs_backend.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/backend/tfjs_backend.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * deeplearn.js backend.
- */
-var tfc = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var tfjs_core_1 = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var common_1 = __webpack_require__(/*! ../common */ "./node_modules/@tensorflow/tfjs-layers/dist/common.js");
-var errors_1 = __webpack_require__(/*! ../errors */ "./node_modules/@tensorflow/tfjs-layers/dist/errors.js");
-var math_utils = __webpack_require__(/*! ../utils/math_utils */ "./node_modules/@tensorflow/tfjs-layers/dist/utils/math_utils.js");
-var common_2 = __webpack_require__(/*! ./common */ "./node_modules/@tensorflow/tfjs-layers/dist/backend/common.js");
-// tslint:enable
-/* Setting and getting backend from deeplearn.js. */
-// Default deeplearn.js backend is WebGL (GPU).
-var backend = 'webgl';
-function setBackend(requestedBackend) {
-    tfc.setBackend(requestedBackend);
-    backend = requestedBackend;
-}
-exports.setBackend = setBackend;
-function getBackend() {
-    return backend;
-}
-exports.getBackend = getBackend;
-/**
- * Indicates whether the backend is operating symbolically.
- *
- * This function will be used to determine how to interpret user code. If
- * it returns true, calls to the backend construct a symbolic graph; if
- * it returns false, calls to the backend execute immediately.
- */
-function isBackendSymbolic() {
-    return false;
-}
-exports.isBackendSymbolic = isBackendSymbolic;
-/**
- * Get the number of elements in a Tensor.
- * @param x The Tensor.
- * @return Number of elements in `x`.
- */
-function countParams(x) {
-    var shape = x.shape;
-    if (shape.length > 0) {
-        return shape.reduce(function (a, b) { return a * b; });
-    }
-    else {
-        // Scalar.
-        return 1;
-    }
-}
-exports.countParams = countParams;
-/**
- * Casts a tensor to a different dtype and returns it.
- * @param x Input tensor.
- * @param dtype String: 'float32'|'int32'|'bool'.
- * @returns Tensor of the specified `dtype`.
- */
-function cast(x, dtype) {
-    return x.asType(dtype);
-}
-exports.cast = cast;
-/**
- * Adds a 1-sized dimension at index "axis".
- * @param x Input tensor.
- * @param axis Position where to add the new axis.
- * @returns Result of the dimension expansion.
- */
-function expandDims(x, axis) {
-    if (axis === void 0) { axis = -1; }
-    var outShape = x.shape.slice();
-    if (axis < 0) {
-        axis = outShape.length + axis + 1;
-    }
-    outShape.splice(axis, 0, 1);
-    return x.reshape(outShape);
-}
-exports.expandDims = expandDims;
-/**
- * Repeats a 2D tensor.
- *
- * If `x` has shape `[samples, dim]` and `n` is 2, for example, the output
- * will have shape `[samples, 2, dim]`.
- *
- * @param x Input tensor.
- * @param n Integer, number of times to repeat.
- * @returns The result of the repeat operation.
- * @throws ValueError: If input tensor is not 2D.
- */
-function repeat(x, n) {
-    return tfjs_core_1.tidy(function () {
-        if (x.shape.length !== 2) {
-            throw new errors_1.ValueError("repeat() expects a rank-2 tensor, but received a " +
-                ("rank-" + x.shape.length + " tensor."));
-        }
-        var y = expandDims(x, 1);
-        return tile(y, [1, n, 1]);
-    });
-}
-exports.repeat = repeat;
-/**
- * Flatten an Tensor into 1D.
- * @param x Input tensor.
- * @return The result of the flattening `x`.
- */
-function flatten(x) {
-    var newShape = [math_utils.arrayProd(x.shape)];
-    return x.reshape(newShape);
-}
-exports.flatten = flatten;
-/**
- * Turn a nD tensor into a 2D tensor with same 0th dimension.
- * In other words, it flattens each data samples of a batch.
- *
- * @param x The tensor to flatten. The rank of this tensor is required to be 2
- *   or higher.
- * @return The result of the flattening.
- */
-function batchFlatten(x) {
-    if (x.rank <= 1) {
-        throw new errors_1.ValueError("batchFlatten requires a minimum rank of 2. Got rank: " + x.rank + ".");
-    }
-    var newShape = [x.shape[0], math_utils.arrayProd(x.shape, 1)];
-    return x.reshape(newShape);
-}
-exports.batchFlatten = batchFlatten;
-/**
- * Do slicing along the first axis.
- * @param array input `tf.Tensor`.
- * @param start starting index, inclusive.
- * @param size size of the slice along the first axis.
- * @returns result of the slicing.
- * @throws ValueError: If `array` is of an unsupported subtype of `tf.Tensor`.
- */
-function sliceAlongFirstAxis(array, start, size) {
-    return tfjs_core_1.tidy(function () {
-        switch (array.rank) {
-            case 1:
-                return tfc.slice1d(array, start, size);
-            case 2:
-                return tfc.slice2d(array, [start, 0], [size, array.shape[1]]);
-            case 3:
-                return tfc.slice3d(array, [start, 0, 0], [size, array.shape[1], array.shape[2]]);
-            case 4:
-                return tfc.slice4d(array, [start, 0, 0, 0], [size, array.shape[1], array.shape[2], array.shape[3]]);
-            default:
-                throw new errors_1.ValueError("sliceAlongFirstAxis() received an unsupported tensor rank: " +
-                    ("" + array.rank));
-        }
-    });
-}
-exports.sliceAlongFirstAxis = sliceAlongFirstAxis;
-/**
- * Do slicing along the last axis.
- * @param array input `tf.Tensor`.
- * @param start starting index, inclusive.
- * @param size size of the slice along the last axis.
- * @returns result of the slicing.
- * @throws ValueError: If `array` is of an unsupported subtype of `tf.Tensor`.
- */
-function sliceAlongLastAxis(array, start, size) {
-    return tfjs_core_1.tidy(function () {
-        switch (array.rank) {
-            case 1:
-                return tfc.slice1d(array, start, size);
-            case 2:
-                return tfc.slice2d(array, [0, start], [array.shape[0], size]);
-            case 3:
-                return tfc.slice3d(array, [0, 0, start], [array.shape[0], array.shape[1], size]);
-            case 4:
-                return tfc.slice4d(array, [0, 0, 0, start], [array.shape[0], array.shape[1], array.shape[2], size]);
-            default:
-                throw new errors_1.ValueError("sliceAlongLastAxis() received an unsupported tensor rank: " +
-                    ("" + array.rank));
-        }
-    });
-}
-exports.sliceAlongLastAxis = sliceAlongLastAxis;
-/**
- * Do slicing along the sepcified axis.
- * @param array input `tf.Tensor`.
- * @param start starting index, inclusive.
- * @param size of the slice along the chosen axis.
- * @param choose an axis.
- * @returns result of the slicing.
- * @throws ValueError: If `array` is of an unsupported subtype of `tf.Tensor`.
- */
-function sliceAlongAxis(array, start, size, axis) {
-    return tfjs_core_1.tidy(function () {
-        switch (array.rank) {
-            case 1:
-                return tfc.slice1d(array, start, size);
-            case 2:
-                switch (axis) {
-                    case 1:
-                        return sliceAlongFirstAxis(array, start, size);
-                    case 2:
-                        return sliceAlongLastAxis(array, start, size);
-                    default:
-                        throw new errors_1.ValueError("The axis is not within the rank of the tensor " +
-                            ("" + axis));
-                }
-            case 3:
-                switch (axis) {
-                    case 1:
-                        return sliceAlongFirstAxis(array, start, size);
-                    case 2:
-                        return tfc.slice3d(array, [0, start, 0], [array.shape[0], size, array.shape[2]]);
-                    case 3:
-                        return sliceAlongLastAxis(array, start, size);
-                    default:
-                        throw new errors_1.ValueError("The axis is not within the rank of the tensor " +
-                            ("" + axis));
-                }
-            case 4:
-                switch (axis) {
-                    case 1:
-                        return sliceAlongFirstAxis(array, start, size);
-                    case 2:
-                        return tfc.slice4d(array, [0, start, 0, 0], [array.shape[0], size, array.shape[2], array.shape[3]]);
-                    case 3:
-                        return tfc.slice4d(array, [0, 0, start, 0], [array.shape[0], array.shape[1], size, array.shape[3]]);
-                    case 4:
-                        return sliceAlongLastAxis(array, start, size);
-                    default:
-                        throw new errors_1.ValueError("The axis is not within the rank of the tensor " +
-                            ("" + axis));
-                }
-            default:
-                throw new errors_1.ValueError("sliceAlongLastAxis() received an unsupported tensor rank: " +
-                    ("" + array.rank));
-        }
-    });
-}
-exports.sliceAlongAxis = sliceAlongAxis;
-/**
- * Concatenates a list of tensors alongside the specified axis.
- * @param tensors `Array` of tensors to concatenate.
- * @param axis Concatenation axis.
- * @returns The result of the concatenation.
- */
-function concatenate(tensors, axis) {
-    if (axis === void 0) { axis = -1; }
-    var rank;
-    if (axis < 0) {
-        rank = tensors[0].rank;
-        if (rank !== 0) {
-            axis = rank;
-        }
-        else {
-            axis = 0;
-        }
-    }
-    if (axis === tensors[0].rank) {
-        // Porting Note: This is necessary because tfc.concat() requires axis to be
-        //   in the interval [-rank, rank).
-        axis = -1;
-    }
-    // Porting Note: Sparse concat is not supported yet.
-    return tfc.concat(tensors, axis);
-}
-exports.concatenate = concatenate;
-/**
- * Concatenate two arrays along the first dimension.
- * @param a The 1st `tf.Tensor` to concatenate.
- * @param b The 2nd `tf.Tensor` to concatenate.
- * @returns Result of the concatenation.
- * @throws ValueError: If `a` is of an unsupported subtype of `tf.Tensor`.
- */
-function concatAlongFirstAxis(a, b) {
-    switch (a.rank) {
-        case 1:
-            return tfc.concat1d([a, b]);
-        case 2:
-            return tfc.concat2d([a, b], 0);
-        case 3:
-            return tfc.concat3d([a, b], 0);
-        case 4:
-            return tfc.concat4d([a, b], 0);
-        default:
-            throw new errors_1.ValueError('concatAlongFirstAxis() received an unsupported tensor rank: ' +
-                a.rank);
-    }
-}
-exports.concatAlongFirstAxis = concatAlongFirstAxis;
-/**
- * Creates a tensor by tiling `x` by `n`.
- * @param x A tensor.
- * @param n An Array of integers or a single integer. If an Array, the length
- *   must be the same as the number of dimensions in `x`. If a single integer,
- *   it will be treated as an Array of length 1.
- */
-function tile(x, n) {
-    if (!Array.isArray(n)) {
-        n = [n];
-    }
-    if (x.rank !== n.length) {
-        throw new errors_1.ValueError("The length of input n (" + n.length + ") does not match " +
-            ("the number of dimensions in input x (" + x.rank + ")"));
-    }
-    return tfc.tile(x, n);
-}
-exports.tile = tile;
-/* Creation of random tensors. */
-/**
- * Get a tensor with normal distribution of values.
- *
- * @param shape Shape of the tensor.
- * @param mean mean value of the normal distribution.
- * @param stddev standard deviation of the normal distribution.
- * @param dtype
- * @param seed
- * @return The normal tensor.
- */
-function randomNormal(shape, mean, stddev, dtype, seed) {
-    if (mean === void 0) { mean = 0.0; }
-    if (stddev === void 0) { stddev = 1.0; }
-    return tfc.randomNormal(shape, mean, stddev, dtype, seed);
-}
-exports.randomNormal = randomNormal;
-/* Linear Algebra */
-/**
- * Multiply two tensors and returns the result as a tensor.
- *
- * For 2D tensors, this is equivalent to matrix multiplication (matMul).
- * For tensors of higher ranks, it follows the Theano behavior,
- * (e.g. `(2, 3) * (4, 3, 5) -> (2, 4, 5)`).  From the Theano documentation:
- *
- * For N dimensions it is a sum product over the last axis of x and the
- * second-to-last of y:
- *
- * @param x A tensor of at least rank 2.
- * @param y A tensor of at least rank 2.
- * @param fusedActivation (optional) A string identifying the activation
- *   function.
- * @return Result of the dot operation.
- */
-function dot(x, y, fusedActivation, bias) {
-    if ((x.rank < 2) || (y.rank < 2)) {
-        throw new errors_1.NotImplementedError("dot requires both inputs to be rank >= 2" +
-            (" but got x shape = " + x.shape + " and y shape = " + y.shape));
-    }
-    if (y.rank >= 3) {
-        var xLastDim = x.shape.slice(-1)[0];
-        var ySecondLastDim = y.shape.slice(-2)[0];
-        if (xLastDim !== ySecondLastDim) {
-            throw new errors_1.NotImplementedError("If rank y >= 3, then the second last dim" +
-                (" of y must equal the last dim of x but got x shape = " + x.shape + " and ") +
-                (" y shape = " + y.shape));
-        }
-    }
-    // Handle basic 2D x 2D case.
-    if ((x.rank === 2) && (y.rank === 2)) {
-        var transposeX = false;
-        var transposeY = false;
-        // tfc.fused.matMul only fuses certain activation functions. Unsupported
-        // activation functions are treated as 'linear' activations, which is
-        // equivalent to a no-op.
-        return tfc.fused.matMul(x, y, transposeX, transposeY, bias ? reshapeBias(x.rank, bias, common_2.imageDataFormat()) : null, fusedActivation);
-    }
-    else {
-        // Reshape x into the analogous 2D Tensor.
-        var xFirstDims = x.shape.slice(); // Holds all but the last dim of x.
-        var xLastDim = xFirstDims.pop();
-        x = x.reshape([-1, xLastDim]);
-        // Reshape y into the analogous 2D Tensor, and keep track of the
-        // required dimensions to reproduce the output shape.
-        var yShape = y.shape.slice();
-        var yLastDim = yShape.pop();
-        var ySecondLastDim = yShape.pop();
-        var yOtherDims = yShape.concat([yLastDim]);
-        // permutation should be like [r-2, 0, 1, 2, ... r-4, r-3, r-1]
-        // where r is the rank of y.
-        var perm = Array.from({ length: y.rank }, function (_, i) {
-            if (i === 0) {
-                return y.rank - 2;
-            }
-            else if (i <= y.rank - 2) {
-                return i - 1;
-            }
-            return i;
-        });
-        y = y.transpose(perm).reshape([ySecondLastDim, -1]);
-        // Multiply x and y as 2D Tensors, and then reshape back to original.
-        var outputShape = xFirstDims.concat(yOtherDims);
-        var transposeX = false;
-        var transposeY = false;
-        return tfc.fused
-            .matMul(x, y, transposeX, transposeY, bias ? reshapeBias(x.rank, bias, common_2.imageDataFormat()) : null, fusedActivation)
-            .reshape(outputShape);
-    }
-}
-exports.dot = dot;
-/**
- * Compute the sign Tensor of an input Tensor.
- *
- * Elements of the input `tf.Tensor` that are === 0 are mapped to 0.
- * Elements of the input `tf.Tensor` that are > 0 are mapped to 1.
- * Elements of the input `tf.Tensor` that are < 0 are mapped to -1.
- *
- * @param x Input `tf.Tensor`.
- * @return The sign `tf.Tensor`.
- */
-function sign(x) {
-    // TODO(cais): Move to the core.
-    return tfjs_core_1.tidy(function () {
-        var zerosLikeX = tfjs_core_1.zerosLike(x);
-        var onesLikeX = tfjs_core_1.onesLike(x);
-        return tfjs_core_1.where(tfc.equal(x, zerosLikeX), zerosLikeX, tfjs_core_1.where(tfc.greater(x, tfjs_core_1.zerosLike(x)), onesLikeX, tfc.mul(-1, onesLikeX)));
-    });
-}
-exports.sign = sign;
-/**
- * Computes the one-hot representation of an integer tensor.
- * @param indices nD integer tensor of shape
- *   `(batch_size, dim1, dim2, ... dim(n-1))`
- * @param numClasses Integer, number of classes to consider.
- * @returns (n + 1)D one hot representation of the input
- *   with shape `(batch_size, dim1, dim2, ... dim(n-1), num_classes)`
- */
-function oneHot(indices, numClasses) {
-    return tfjs_core_1.tidy(function () {
-        if (indices.rank !== 1) {
-            throw new Error('Only 1D one-hot tensors are supported in the ' +
-                'deeplearn backend, at present.');
-        }
-        indices = indices.toInt();
-        return tfc.oneHot(indices, numClasses).toFloat();
-    });
-}
-exports.oneHot = oneHot;
-/* Elementary math functions. */
-/**
- * Retrieves the elements of indices `indices` in the tensor `reference`.
- * @param reference A tensor.
- * @param indices An integer tensor of indices or an `Array` of integers.
- * @param axis Axis along which to perform the gather operation.
- * @returns The result of the gathering as a tensor.
- */
-function gather(reference, indices, axis) {
-    return tfjs_core_1.tidy(function () {
-        if (Array.isArray(indices)) {
-            indices = tfjs_core_1.tensor1d(indices, 'int32');
-        }
-        else {
-            indices = indices.toInt();
-        }
-        return tfc.gather(reference, indices, axis);
-    });
-}
-exports.gather = gather;
-/**
- * Element-wise square.
- * @param x Input tensor.
- * @return element-wise x^2
- */
-function square(x) {
-    return tfc.mulStrict(x, x);
-}
-exports.square = square;
-/**
- * Element-wise exponentiation.
- *
- * Porting Note: In PyKeras, `a` (the exponent) is a Python integer, which
- *   takes advatnage of the backend's (e.g., TensorFlow's) automatic conversion
- *   to tensor. Here we allow `a` to be either a number or a tensor.
- *
- * @param x The base tensor.
- * @param a The exponent, tensor or number. If a number, it is rounded to the
- *   nearest integer and converted to a tensor.
- * @returns A tensor of the same shape as `x`.
- */
-function pow(x, a) {
-    return tfjs_core_1.tidy(function () {
-        if (typeof (a) === 'number') {
-            a = tfjs_core_1.scalar(Math.round(a), 'int32');
-        }
-        if (a.dtype !== 'int32') {
-            throw new errors_1.NotImplementedError("Non-int32 dtype (" + a.dtype + ") is not supported by pow() yet");
-        }
-        return tfc.pow(x, a);
-    });
-}
-exports.pow = pow;
-/**
- * Reshapes bias tensor according to rank of x.
- */
-function reshapeBias(xRank, bias, dataFormat) {
-    var biasShape = bias.shape;
-    if (bias.rank !== 1 && bias.rank !== xRank) {
-        throw new errors_1.ValueError('Unexpected bias dimensions: ' + bias.rank +
-            '; expected it to be 1 or ' + xRank);
-    }
-    if (xRank === 5) {
-        if (dataFormat === 'channelsFirst') {
-            if (biasShape.length === 1) {
-                return bias.reshape([1, biasShape[0], 1, 1, 1]);
-            }
-            else {
-                return bias.reshape([1, biasShape[3], biasShape[0], biasShape[1], biasShape[2]]);
-            }
-        }
-        else if (dataFormat === 'channelsLast') {
-            if (biasShape.length === 1) {
-                return bias.reshape([1, 1, 1, 1, biasShape[0]]);
-            }
-            else {
-                return bias.reshape([1].concat(biasShape));
-            }
-        }
-    }
-    else if (xRank === 4) {
-        if (dataFormat === 'channelsFirst') {
-            if (biasShape.length === 1) {
-                return bias.reshape([1, biasShape[0], 1, 1]);
-            }
-            else {
-                return bias.reshape([1, biasShape[2], biasShape[0], biasShape[1]]);
-            }
-        }
-        else if (dataFormat === 'channelsLast') {
-            if (biasShape.length === 1) {
-                return bias.reshape([1, 1, 1, biasShape[0]]);
-            }
-            else {
-                return bias.reshape([1].concat(biasShape));
-            }
-        }
-    }
-    else if (xRank === 3) {
-        if (dataFormat === 'channelsFirst') {
-            if (biasShape.length === 1) {
-                return bias.reshape([1, biasShape[0], 1]);
-            }
-            else {
-                return bias.reshape([1, biasShape[1], biasShape[0]]);
-            }
-        }
-        else if (dataFormat === 'channelsLast') {
-            if (biasShape.length === 1) {
-                return bias.reshape([1, 1, biasShape[0]]);
-            }
-            else {
-                return bias.reshape([1].concat(biasShape));
-            }
-        }
-    }
-    else if (xRank < 3) {
-        return bias;
-    }
-    throw new errors_1.ValueError("Unsupported input rank by biasAdd: " + bias.rank);
-}
-/* Neural-network operations. */
-/**
- * Add a bias to a tensor.
- *
- * @param x The tensor to add the bias to.
- * @param bias The bias to add to `x`. Must be 1D or the same rank as `x`.
- * @return Result of the bias adding.
- * @throws ValueError: If the rank of `bias` is incorrect.
- */
-function biasAdd(x, bias, dataFormat) {
-    return tfjs_core_1.tidy(function () {
-        if (dataFormat == null) {
-            dataFormat = common_2.imageDataFormat();
-        }
-        common_1.checkDataFormat(dataFormat);
-        return x.add(reshapeBias(x.rank, bias, dataFormat));
-    });
-}
-exports.biasAdd = biasAdd;
-/**
- * Exponential linear unit (ELU).
- * @param x A tensor or variable to compute the activation function for.
- * @param alpha: A scalar, a scaling factor for the negative section.
- * @return Output of the ELU operation.
- */
-function elu(x, alpha) {
-    if (alpha === void 0) { alpha = 1; }
-    // TODO(cais): Add support for alpha values other than 1.
-    if (alpha !== 1) {
-        throw new errors_1.NotImplementedError("Support for alpha values other than 1 (" + alpha + ") is not implemented " +
-            "yet.");
-    }
-    return tfc.elu(x);
-}
-exports.elu = elu;
-/**
- * Softsign of a tensor.
- *
- * Defined as x / (abs(x) + 1), element-wise.
- *
- * @param x: Input.
- * @returns Output.
- */
-function softsign(x) {
-    return tfjs_core_1.tidy(function () { return tfc.div(x, tfc.abs(x).add(1)); });
-}
-exports.softsign = softsign;
-/**
- * Sets entries in `x` to zero at random, while scaling the entire tensor.
- *
- * @param x input tensor.
- * @param level fraction of the entries in the tensor that will be set to 0.
- * @param noiseShape shape of randomly generated keep/drop flags, must be
- *   broadcastable to the shape of `x`. Optional.
- * @param seed random seed to ensure determinism. Optional.
- * @returns Result of the dropout operation.
- */
-function dropout(x, level, noiseShape, seed) {
-    return tfjs_core_1.tidy(function () { return tfc.dropout(x, level, noiseShape, seed); });
-}
-exports.dropout = dropout;
-/**
- * Element-wise, segment-wise linear approximation of sigmoid.
- *
- * Returns `0.` if `x < -2.5`, `1.` if `x > 2.5`.
- * In `-2.5 <= x <= 2.5`, returns `0.2 * x + 0.5`.
- *
- * @param x Input tensor.
- * @returns Output tensor.
- */
-function hardSigmoid(x) {
-    return tfjs_core_1.tidy(function () {
-        var y = tfc.add(.5, tfc.mul(.2, x));
-        return tfc.clipByValue(y, 0, 1);
-    });
-}
-exports.hardSigmoid = hardSigmoid;
-/**
- * Invoke `x` in the training phase, and `alt` otherwise.
- *
- * Porting Note: We do not create placeholder tensors for the `training` boolean
- *   flag here, because there is no such thing in the TF.js imperative backend.
- *
- * @param x The function to invoke iff `training` is `true`.
- * @param alt The function to invoke iff `training` is `false`.
- * @param training Boolean flag for whether training phase is active.
- * @returns The return value of `x()` if `training` is `true`, or the return
- *   value of `alt()` if `training` is `false`.
- */
-function inTrainPhase(x, alt, training) {
-    if (training === void 0) { training = false; }
-    return training ? x() : alt();
-}
-exports.inTrainPhase = inTrainPhase;
-//# sourceMappingURL=tfjs_backend.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/common.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/common.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Common functions for TensorFlow.js Layers.
- */
-var common_1 = __webpack_require__(/*! ./keras_format/common */ "./node_modules/@tensorflow/tfjs-layers/dist/keras_format/common.js");
-var generic_utils_1 = __webpack_require__(/*! ./utils/generic_utils */ "./node_modules/@tensorflow/tfjs-layers/dist/utils/generic_utils.js");
-// A map from the requested scoped name of a Tensor to the number of Tensors
-// wanting that name so far.  This allows enforcing name uniqueness by appending
-// an incrementing index, e.g. scope/name, scope/name_1, scope/name_2, etc.
-var nameMap = new Map();
-function checkDataFormat(value) {
-    generic_utils_1.checkStringTypeUnionValue(common_1.VALID_DATA_FORMAT_VALUES, 'DataFormat', value);
-}
-exports.checkDataFormat = checkDataFormat;
-function checkPaddingMode(value) {
-    generic_utils_1.checkStringTypeUnionValue(common_1.VALID_PADDING_MODE_VALUES, 'PaddingMode', value);
-}
-exports.checkPaddingMode = checkPaddingMode;
-function checkPoolMode(value) {
-    generic_utils_1.checkStringTypeUnionValue(common_1.VALID_POOL_MODE_VALUES, 'PoolMode', value);
-}
-exports.checkPoolMode = checkPoolMode;
-var _nameScopeStack = [];
-var _nameScopeDivider = '/';
-/**
- * Enter namescope, which can be nested.
- */
-function nameScope(name, fn) {
-    _nameScopeStack.push(name);
-    try {
-        var val = fn();
-        _nameScopeStack.pop();
-        return val;
-    }
-    catch (e) {
-        _nameScopeStack.pop();
-        throw e;
-    }
-}
-exports.nameScope = nameScope;
-/**
- * Get the current namescope as a flat, concatenated string.
- */
-function currentNameScopePrefix() {
-    if (_nameScopeStack.length === 0) {
-        return '';
-    }
-    else {
-        return _nameScopeStack.join(_nameScopeDivider) + _nameScopeDivider;
-    }
-}
-/**
- * Get the name a Tensor (or Variable) would have if not uniqueified.
- * @param tensorName
- * @return Scoped name string.
- */
-function getScopedTensorName(tensorName) {
-    if (!isValidTensorName(tensorName)) {
-        throw new Error('Not a valid tensor name: \'' + tensorName + '\'');
-    }
-    return currentNameScopePrefix() + tensorName;
-}
-exports.getScopedTensorName = getScopedTensorName;
-/**
- * Get unique names for Tensors and Variables.
- * @param scopedName The fully-qualified name of the Tensor, i.e. as produced by
- *  `getScopedTensorName()`.
- * @return A unique version of the given fully scoped name.
- *   If this is the first time that the scoped name is seen in this session,
- *   then the given `scopedName` is returned unaltered.  If the same name is
- *   seen again (producing a collision), an incrementing suffix is added to the
- *   end of the name, so it takes the form 'scope/name_1', 'scope/name_2', etc.
- */
-function getUniqueTensorName(scopedName) {
-    if (!isValidTensorName(scopedName)) {
-        throw new Error('Not a valid tensor name: \'' + scopedName + '\'');
-    }
-    if (!nameMap.has(scopedName)) {
-        nameMap.set(scopedName, 0);
-    }
-    var index = nameMap.get(scopedName);
-    nameMap.set(scopedName, nameMap.get(scopedName) + 1);
-    if (index > 0) {
-        var result = scopedName + '_' + index;
-        // Mark the composed name as used in case someone wants
-        // to call getUniqueTensorName("name_1").
-        nameMap.set(result, 1);
-        return result;
-    }
-    else {
-        return scopedName;
-    }
-}
-exports.getUniqueTensorName = getUniqueTensorName;
-var tensorNameRegex = new RegExp(/^[A-Za-z0-9][-A-Za-z0-9\._\/]*$/);
-/**
- * Determine whether a string is a valid tensor name.
- * @param name
- * @returns A Boolean indicating whether `name` is a valid tensor name.
- */
-function isValidTensorName(name) {
-    return !!name.match(tensorNameRegex);
-}
-exports.isValidTensorName = isValidTensorName;
-//# sourceMappingURL=common.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/errors.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/errors.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Explicit error types.
- *
- * See the following link for more information about why the code includes
- * calls to setPrototypeOf:
- *
- * https://github.com/Microsoft/TypeScript-wiki/blob/master/Breaking-Changes.md#extending-built-ins-like-error-array-and-map-may-no-longer-work
- */
-// tslint:enable
-/**
- * Equivalent of Python's AttributeError.
- */
-var AttributeError = /** @class */ (function (_super) {
-    __extends(AttributeError, _super);
-    function AttributeError(message) {
-        var _this = _super.call(this, message) || this;
-        // Set the prototype explicitly.
-        Object.setPrototypeOf(_this, AttributeError.prototype);
-        return _this;
-    }
-    return AttributeError;
-}(Error));
-exports.AttributeError = AttributeError;
-/**
- * Equivalent of Python's RuntimeError.
- */
-var RuntimeError = /** @class */ (function (_super) {
-    __extends(RuntimeError, _super);
-    function RuntimeError(message) {
-        var _this = _super.call(this, message) || this;
-        // Set the prototype explicitly.
-        Object.setPrototypeOf(_this, RuntimeError.prototype);
-        return _this;
-    }
-    return RuntimeError;
-}(Error));
-exports.RuntimeError = RuntimeError;
-/**
- * Equivalent of Python's ValueError.
- */
-var ValueError = /** @class */ (function (_super) {
-    __extends(ValueError, _super);
-    function ValueError(message) {
-        var _this = _super.call(this, message) || this;
-        // Set the prototype explicitly.
-        Object.setPrototypeOf(_this, ValueError.prototype);
-        return _this;
-    }
-    return ValueError;
-}(Error));
-exports.ValueError = ValueError;
-/**
- * Equivalent of Python's NotImplementedError.
- */
-var NotImplementedError = /** @class */ (function (_super) {
-    __extends(NotImplementedError, _super);
-    function NotImplementedError(message) {
-        var _this = _super.call(this, message) || this;
-        // Set the prototype explicitly.
-        Object.setPrototypeOf(_this, NotImplementedError.prototype);
-        return _this;
-    }
-    return NotImplementedError;
-}(Error));
-exports.NotImplementedError = NotImplementedError;
-/**
- * Equivalent of Python's AssertionError.
- */
-var AssertionError = /** @class */ (function (_super) {
-    __extends(AssertionError, _super);
-    function AssertionError(message) {
-        var _this = _super.call(this, message) || this;
-        // Set the prototype explicitly.
-        Object.setPrototypeOf(_this, AssertionError.prototype);
-        return _this;
-    }
-    return AssertionError;
-}(Error));
-exports.AssertionError = AssertionError;
-/**
- * Equivalent of Python's IndexError.
- */
-var IndexError = /** @class */ (function (_super) {
-    __extends(IndexError, _super);
-    function IndexError(message) {
-        var _this = _super.call(this, message) || this;
-        // Set the prototype explicitly.
-        Object.setPrototypeOf(_this, IndexError.prototype);
-        return _this;
-    }
-    return IndexError;
-}(Error));
-exports.IndexError = IndexError;
-//# sourceMappingURL=errors.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/exports_metrics.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/exports_metrics.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var losses = __webpack_require__(/*! ./losses */ "./node_modules/@tensorflow/tfjs-layers/dist/losses.js");
-var metrics = __webpack_require__(/*! ./metrics */ "./node_modules/@tensorflow/tfjs-layers/dist/metrics.js");
-/**
- * Binary accuracy metric function.
- *
- * `yTrue` and `yPred` can have 0-1 values. Example:
- * ```js
- * const x = tf.tensor2d([[1, 1, 1, 1], [0, 0, 0, 0]], [2, 4]);
- * const y = tf.tensor2d([[1, 0, 1, 0], [0, 0, 0, 1]], [2, 4]);
- * const accuracy = tf.metrics.binaryAccuracy(x, y);
- * accuracy.print();
- * ```
- *
- * `yTrue` and `yPred` can also have floating-number values between 0 and 1, in
- * which case the values will be thresholded at 0.5 to yield 0-1 values (i.e.,
- * a value >= 0.5 and <= 1.0 is interpreted as 1.
- * )
- * Example:
- * ```js
- * const x = tf.tensor1d([1, 1, 1, 1, 0, 0, 0, 0]);
- * const y = tf.tensor1d([0.2, 0.4, 0.6, 0.8, 0.2, 0.3, 0.4, 0.7]);
- * const accuracy = tf.metrics.binaryAccuracy(x, y);
- * accuracy.print();
- * ```
- *
- * @param yTrue Binary Tensor of truth.
- * @param yPred Binary Tensor of prediction.
- * @return Accuracy Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function binaryAccuracy(yTrue, yPred) {
-    return metrics.binaryAccuracy(yTrue, yPred);
-}
-exports.binaryAccuracy = binaryAccuracy;
-/**
- * Binary crossentropy metric function.
- *
- * Example:
- * ```js
- * const x = tf.tensor2d([[0], [1], [1], [1]]);
- * const y = tf.tensor2d([[0], [0], [0.5], [1]]);
- * const crossentropy = tf.metrics.binaryCrossentropy(x, y);
- * crossentropy.print();
- * ```
- *
- * @param yTrue Binary Tensor of truth.
- * @param yPred Binary Tensor of prediction, probabilities for the `1` case.
- * @return Accuracy Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function binaryCrossentropy(yTrue, yPred) {
-    return metrics.binaryCrossentropy(yTrue, yPred);
-}
-exports.binaryCrossentropy = binaryCrossentropy;
-/**
- * Sparse categorical accuracy metric function.
- *
- * Example:
- * ```js
- *
- * const yTrue = tf.tensor1d([1, 1, 2, 2, 0]);
- * const yPred = tf.tensor2d(
- *      [[0, 1, 0], [1, 0, 0], [0, 0.4, 0.6], [0, 0.6, 0.4], [0.7, 0.3, 0]]);
- * const crossentropy = tf.metrics.sparseCategoricalAccuracy(yTrue, yPred);
- * crossentropy.print();
- * ```
- *
- * @param yTrue True labels: indices.
- * @param yPred Predicted probabilities or logits.
- * @returns Accuracy tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function sparseCategoricalAccuracy(yTrue, yPred) {
-    return metrics.sparseCategoricalAccuracy(yTrue, yPred);
-}
-exports.sparseCategoricalAccuracy = sparseCategoricalAccuracy;
-/**
- * Categorical accuracy metric function.
- *
- * Example:
- * ```js
- * const x = tf.tensor2d([[0, 0, 0, 1], [0, 0, 0, 1]]);
- * const y = tf.tensor2d([[0.1, 0.8, 0.05, 0.05], [0.1, 0.05, 0.05, 0.8]]);
- * const accuracy = tf.metrics.categoricalAccuracy(x, y);
- * accuracy.print();
- * ```
- *
- * @param yTrue Binary Tensor of truth: one-hot encoding of categories.
- * @param yPred Binary Tensor of prediction: probabilities or logits for the
- *   same categories as in `yTrue`.
- * @return Accuracy Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function categoricalAccuracy(yTrue, yPred) {
-    return metrics.categoricalAccuracy(yTrue, yPred);
-}
-exports.categoricalAccuracy = categoricalAccuracy;
-/**
- * Categorical crossentropy between an output tensor and a target tensor.
- *
- * @param target A tensor of the same shape as `output`.
- * @param output A tensor resulting from a softmax (unless `fromLogits` is
- *  `true`, in which case `output` is expected to be the logits).
- * @param fromLogits Boolean, whether `output` is the result of a softmax, or is
- *   a tensor of logits.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function categoricalCrossentropy(yTrue, yPred) {
-    return metrics.categoricalCrossentropy(yTrue, yPred);
-}
-exports.categoricalCrossentropy = categoricalCrossentropy;
-/**
- * Computes the precision of the predictions with respect to the labels.
- *
- * Example:
- * ```js
- * const x = tf.tensor2d(
- *    [
- *      [0, 0, 0, 1],
- *      [0, 1, 0, 0],
- *      [0, 0, 0, 1],
- *      [1, 0, 0, 0],
- *      [0, 0, 1, 0]
- *    ]
- * );
- *
- * const y = tf.tensor2d(
- *    [
- *      [0, 0, 1, 0],
- *      [0, 1, 0, 0],
- *      [0, 0, 0, 1],
- *      [0, 1, 0, 0],
- *      [0, 1, 0, 0]
- *    ]
- * );
- *
- * const precision = tf.metrics.precision(x, y);
- * precision.print();
- * ```
- *
- * @param yTrue The ground truth values. Expected to be contain only 0-1 values.
- * @param yPred The predicted values. Expected to be contain only 0-1 values.
- * @return Precision Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function precision(yTrue, yPred) {
-    return metrics.precision(yTrue, yPred);
-}
-exports.precision = precision;
-/**
- * Computes the recall of the predictions with respect to the labels.
- *
- * Example:
- * ```js
- * const x = tf.tensor2d(
- *    [
- *      [0, 0, 0, 1],
- *      [0, 1, 0, 0],
- *      [0, 0, 0, 1],
- *      [1, 0, 0, 0],
- *      [0, 0, 1, 0]
- *    ]
- * );
- *
- * const y = tf.tensor2d(
- *    [
- *      [0, 0, 1, 0],
- *      [0, 1, 0, 0],
- *      [0, 0, 0, 1],
- *      [0, 1, 0, 0],
- *      [0, 1, 0, 0]
- *    ]
- * );
- *
- * const recall = tf.metrics.recall(x, y);
- * recall.print();
- * ```
- *
- * @param yTrue The ground truth values. Expected to be contain only 0-1 values.
- * @param yPred The predicted values. Expected to be contain only 0-1 values.
- * @return Recall Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function recall(yTrue, yPred) {
-    return metrics.recall(yTrue, yPred);
-}
-exports.recall = recall;
-/**
- * Loss or metric function: Cosine proximity.
- *
- * Mathematically, cosine proximity is defined as:
- *   `-sum(l2Normalize(yTrue) * l2Normalize(yPred))`,
- * wherein `l2Normalize()` normalizes the L2 norm of the input to 1 and `*`
- * represents element-wise multiplication.
- *
- * ```js
- * const yTrue = tf.tensor2d([[1, 0], [1, 0]]);
- * const yPred = tf.tensor2d([[1 / Math.sqrt(2), 1 / Math.sqrt(2)], [0, 1]]);
- * const proximity = tf.metrics.cosineProximity(yTrue, yPred);
- * proximity.print();
- * ```
- *
- * @param yTrue Truth Tensor.
- * @param yPred Prediction Tensor.
- * @return Cosine proximity Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function cosineProximity(yTrue, yPred) {
-    return losses.cosineProximity(yTrue, yPred);
-}
-exports.cosineProximity = cosineProximity;
-/**
- * Loss or metric function: Mean absolute error.
- *
- * Mathematically, mean absolute error is defined as:
- *   `mean(abs(yPred - yTrue))`,
- * wherein the `mean` is applied over feature dimensions.
- *
- * ```js
- * const yTrue = tf.tensor2d([[0, 1], [0, 0], [2, 3]]);
- * const yPred = tf.tensor2d([[0, 1], [0, 1], [-2, -3]]);
- * const mse = tf.metrics.meanAbsoluteError(yTrue, yPred);
- * mse.print();
- * ```
- *
- * @param yTrue Truth Tensor.
- * @param yPred Prediction Tensor.
- * @return Mean absolute error Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function meanAbsoluteError(yTrue, yPred) {
-    return losses.meanAbsoluteError(yTrue, yPred);
-}
-exports.meanAbsoluteError = meanAbsoluteError;
-/**
- * Loss or metric function: Mean absolute percentage error.
- *
- * ```js
- * const yTrue = tf.tensor2d([[0, 1], [10, 20]]);
- * const yPred = tf.tensor2d([[0, 1], [11, 24]]);
- * const mse = tf.metrics.meanAbsolutePercentageError(yTrue, yPred);
- * mse.print();
- * ```
- *
- * Aliases: `tf.metrics.MAPE`, `tf.metrics.mape`.
- *
- * @param yTrue Truth Tensor.
- * @param yPred Prediction Tensor.
- * @return Mean absolute percentage error Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function meanAbsolutePercentageError(yTrue, yPred) {
-    return losses.meanAbsolutePercentageError(yTrue, yPred);
-}
-exports.meanAbsolutePercentageError = meanAbsolutePercentageError;
-function MAPE(yTrue, yPred) {
-    return losses.meanAbsolutePercentageError(yTrue, yPred);
-}
-exports.MAPE = MAPE;
-function mape(yTrue, yPred) {
-    return losses.meanAbsolutePercentageError(yTrue, yPred);
-}
-exports.mape = mape;
-/**
- * Loss or metric function: Mean squared error.
- *
- * ```js
- * const yTrue = tf.tensor2d([[0, 1], [3, 4]]);
- * const yPred = tf.tensor2d([[0, 1], [-3, -4]]);
- * const mse = tf.metrics.meanSquaredError(yTrue, yPred);
- * mse.print();
- * ```
- *
- * Aliases: `tf.metrics.MSE`, `tf.metrics.mse`.
- *
- * @param yTrue Truth Tensor.
- * @param yPred Prediction Tensor.
- * @return Mean squared error Tensor.
- */
-/** @doc {heading: 'Metrics', namespace: 'metrics'} */
-function meanSquaredError(yTrue, yPred) {
-    return losses.meanSquaredError(yTrue, yPred);
-}
-exports.meanSquaredError = meanSquaredError;
-function MSE(yTrue, yPred) {
-    return losses.meanSquaredError(yTrue, yPred);
-}
-exports.MSE = MSE;
-function mse(yTrue, yPred) {
-    return losses.meanSquaredError(yTrue, yPred);
-}
-exports.mse = mse;
-//# sourceMappingURL=exports_metrics.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/keras_format/common.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/keras_format/common.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.VALID_DATA_FORMAT_VALUES = ['channelsFirst', 'channelsLast'];
-exports.VALID_PADDING_MODE_VALUES = ['valid', 'same', 'causal'];
-exports.VALID_POOL_MODE_VALUES = ['max', 'avg'];
-exports.VALID_BIDIRECTIONAL_MERGE_MODES = ['sum', 'mul', 'concat', 'ave'];
-exports.VALID_SAMPLE_WEIGHT_MODES = ['temporal'];
-//# sourceMappingURL=common.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/losses.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/losses.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-/* Original Source: losses.py */
-var tfc = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var tfjs_core_1 = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var common_1 = __webpack_require__(/*! ./backend/common */ "./node_modules/@tensorflow/tfjs-layers/dist/backend/common.js");
-var K = __webpack_require__(/*! ./backend/tfjs_backend */ "./node_modules/@tensorflow/tfjs-layers/dist/backend/tfjs_backend.js");
-var errors_1 = __webpack_require__(/*! ./errors */ "./node_modules/@tensorflow/tfjs-layers/dist/errors.js");
-/**
- * Normalizes a tensor wrt the L2 norm alongside the specified axis.
- * @param x
- * @param axis Axis along which to perform normalization.
- */
-function l2Normalize(x, axis) {
-    return tfjs_core_1.tidy(function () {
-        if (x.dtype !== 'float32') {
-            x = x.asType('float32');
-        }
-        var squareSum = tfc.sum(K.square(x), axis, true);
-        var epsilonTensor = tfc.fill(squareSum.shape, common_1.epsilon());
-        var norm = tfc.sqrt(tfc.maximum(squareSum, epsilonTensor));
-        return tfc.div(x, norm);
-    });
-}
-exports.l2Normalize = l2Normalize;
-function meanSquaredError(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () { return tfc.mean(K.square(tfc.sub(yPred, yTrue)), -1); });
-}
-exports.meanSquaredError = meanSquaredError;
-function meanAbsoluteError(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () { return tfc.mean(tfc.abs(tfc.sub(yPred, yTrue)), -1); });
-}
-exports.meanAbsoluteError = meanAbsoluteError;
-function meanAbsolutePercentageError(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var diff = tfc.sub(yTrue, yPred);
-        var clippedTrue = tfc.clipByValue(tfc.abs(yTrue), common_1.epsilon(), Number.MAX_VALUE);
-        var absResult = tfc.abs(tfc.div(diff, clippedTrue));
-        return tfc.mul(100, tfc.mean(absResult, -1));
-    });
-}
-exports.meanAbsolutePercentageError = meanAbsolutePercentageError;
-function meanSquaredLogarithmicError(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var clippedPred = tfc.clipByValue(yPred, common_1.epsilon(), Number.MAX_VALUE);
-        var firstLog = tfc.log(tfc.add(1, clippedPred));
-        var clippedTrue = tfc.clipByValue(yTrue, common_1.epsilon(), Number.MAX_VALUE);
-        var secondLog = tfc.log(tfc.add(1, clippedTrue));
-        return tfc.mean(K.square(tfc.sub(firstLog, secondLog)), -1);
-    });
-}
-exports.meanSquaredLogarithmicError = meanSquaredLogarithmicError;
-function squaredHinge(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var maxResult = tfc.maximum(0, tfc.sub(1, tfc.mul(yTrue, yPred)));
-        return tfc.mean(K.square(maxResult), -1);
-    });
-}
-exports.squaredHinge = squaredHinge;
-function hinge(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var maxResult = tfc.maximum(0, tfc.sub(1, tfc.mul(yTrue, yPred)));
-        return tfc.mean(maxResult, -1);
-    });
-}
-exports.hinge = hinge;
-function categoricalHinge(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var pos = tfc.sum(tfc.mul(yTrue, yPred), -1);
-        var neg = tfc.max(tfc.mul(tfc.sub(1, yTrue), yPred), -1);
-        return tfc.maximum(0, tfc.add(1, tfc.sub(neg, pos)));
-    });
-}
-exports.categoricalHinge = categoricalHinge;
-/**
- * Logarithm of the hyperbolic cosine of the prediction error.
- *
- * `log(cosh(x))` is approximately equal to `(x ** 2) / 2` for small `x` and
- * to `abs(x) - log(2)` for large `x`. This means that 'logcosh' works mostly
- * like the mean squared error, but will not be so strongly affected by the
- * occasional wildly incorrect prediction.
- */
-function logcosh(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var log2 = Math.log(2);
-        var predictionDiff = tfc.sub(yPred, yTrue);
-        var logcoshResult = tfc.sub(tfc.add(predictionDiff, tfc.softplus(tfc.mul(-2, predictionDiff))), log2);
-        return tfc.mean(logcoshResult, -1);
-    });
-}
-exports.logcosh = logcosh;
-function categoricalCrossentropy(target, output, fromLogits) {
-    if (fromLogits === void 0) { fromLogits = false; }
-    return tfjs_core_1.tidy(function () {
-        if (fromLogits) {
-            output = tfc.softmax(output);
-        }
-        else {
-            // scale preds so that the class probabilities of each sample sum to 1.
-            var outputSum = tfc.sum(output, output.shape.length - 1, true);
-            output = tfc.div(output, outputSum);
-        }
-        output = tfc.clipByValue(output, common_1.epsilon(), 1 - common_1.epsilon());
-        return tfc.neg(tfc.sum(tfc.mul(target.toFloat(), tfc.log(output)), output.shape.length - 1));
-    });
-}
-exports.categoricalCrossentropy = categoricalCrossentropy;
-/**
- * Categorical crossentropy with integer targets.
- *
- * @param target An integer tensor.
- * @param output A tensor resulting from a softmax (unless `fromLogits` is
- *  `true`, in which case `output` is expected to be the logits).
- * @param fromLogits Boolean, whether `output` is the result of a softmax, or is
- *   a tensor of logits.
- */
-function sparseCategoricalCrossentropy(target, output) {
-    return tfjs_core_1.tidy(function () {
-        var flatTarget = tfc.floor(K.flatten(target)).toInt();
-        output = tfc.clipByValue(output, common_1.epsilon(), 1 - common_1.epsilon());
-        var outputShape = output.shape;
-        var oneHotTarget = tfc.oneHot(flatTarget, outputShape[outputShape.length - 1])
-            .reshape(outputShape);
-        var fromLogits = false;
-        return categoricalCrossentropy(oneHotTarget, output, fromLogits);
-    });
-}
-exports.sparseCategoricalCrossentropy = sparseCategoricalCrossentropy;
-/**
- * From TensorFlow's implementation in nn_impl.py:
- *
- * For brevity, let `x = logits`, `z = labels`.  The logistic loss is
- *      z * -log(sigmoid(x)) + (1 - z) * -log(1 - sigmoid(x))
- *    = z * -log(1 / (1 + exp(-x))) + (1 - z) * -log(exp(-x) / (1 + exp(-x)))
- *    = z * log(1 + exp(-x)) + (1 - z) * (-log(exp(-x)) + log(1 + exp(-x)))
- *    = z * log(1 + exp(-x)) + (1 - z) * (x + log(1 + exp(-x))
- *    = (1 - z) * x + log(1 + exp(-x))
- *    = x - x * z + log(1 + exp(-x))
- * For x < 0, to avoid overflow in exp(-x), we reformulate the above
- *      x - x * z + log(1 + exp(-x))
- *    = log(exp(x)) - x * z + log(1 + exp(-x))
- *    = - x * z + log(1 + exp(x))
- * Hence, to ensure stability and avoid overflow, the implementation uses this
- * equivalent formulation
- *    max(x, 0) - x * z + log(1 + exp(-abs(x)))
- *
- * @param labels The labels.
- * @param logits The logits.
- */
-function sigmoidCrossEntropyWithLogits(labels, logits) {
-    if (!tfjs_core_1.util.arraysEqual(labels.shape, logits.shape)) {
-        throw new errors_1.ValueError("logits and labels must have the same shape, but got shapes " +
-            (JSON.stringify(labels.shape) + " and " + JSON.stringify(logits.shape)));
-    }
-    return tfjs_core_1.tidy(function () {
-        // The logistic loss formula from above is
-        //   x - x * z + log(1 + exp(-x))
-        // For x < 0, a more numerically stable formula is
-        //   -x * z + log(1 + exp(x))
-        // Note that these two expressions can be combined into the following:
-        //   max(x, 0) - x * z + log(1 + exp(-abs(x)))
-        var reluLogits = logits.relu();
-        var negAbsLogits = logits.abs().neg();
-        return reluLogits.sub(logits.mul(labels)).add(negAbsLogits.exp().log1p());
-    });
-}
-exports.sigmoidCrossEntropyWithLogits = sigmoidCrossEntropyWithLogits;
-function binaryCrossentropy(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var y;
-        y = tfc.clipByValue(yPred, common_1.epsilon(), 1 - common_1.epsilon());
-        y = tfc.log(tfc.div(y, tfc.sub(1, y)));
-        return tfc.mean(sigmoidCrossEntropyWithLogits(yTrue, y), -1);
-    });
-}
-exports.binaryCrossentropy = binaryCrossentropy;
-function kullbackLeiblerDivergence(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var clippedTrue = tfc.clipByValue(yTrue, common_1.epsilon(), 1);
-        var clippedPred = tfc.clipByValue(yPred, common_1.epsilon(), 1);
-        return tfc.sum(tfc.mul(yTrue, tfc.log(tfc.div(clippedTrue, clippedPred))), -1);
-    });
-}
-exports.kullbackLeiblerDivergence = kullbackLeiblerDivergence;
-function poisson(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var logPred = tfc.log(tfc.add(common_1.epsilon(), yPred));
-        return tfc.mean(tfc.sub(yPred, tfc.mul(yTrue, logPred)), -1);
-    });
-}
-exports.poisson = poisson;
-function cosineProximity(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var trueNormalized = l2Normalize(yTrue, -1);
-        var predNormalized = l2Normalize(yPred, -1);
-        var trueXPred = tfc.mul(trueNormalized, predNormalized);
-        return tfc.neg(tfc.sum(trueXPred, -1));
-    });
-}
-exports.cosineProximity = cosineProximity;
-exports.mse = meanSquaredError;
-exports.MSE = meanSquaredError;
-exports.mae = meanAbsoluteError;
-exports.MAE = meanAbsoluteError;
-exports.mape = meanAbsolutePercentageError;
-exports.MAPE = meanAbsolutePercentageError;
-exports.msle = meanSquaredLogarithmicError;
-exports.MSLE = meanSquaredLogarithmicError;
-exports.kld = kullbackLeiblerDivergence;
-exports.KLD = kullbackLeiblerDivergence;
-exports.cosine = cosineProximity;
-// TODO(michaelterry): Add deserialize() function.
-exports.lossesMap = {
-    meanSquaredError: meanSquaredError,
-    meanAbsoluteError: meanAbsoluteError,
-    meanAbsolutePercentageError: meanAbsolutePercentageError,
-    meanSquaredLogarithmicError: meanSquaredLogarithmicError,
-    squaredHinge: squaredHinge,
-    hinge: hinge,
-    categoricalHinge: categoricalHinge,
-    logcosh: logcosh,
-    categoricalCrossentropy: categoricalCrossentropy,
-    sparseCategoricalCrossentropy: sparseCategoricalCrossentropy,
-    binaryCrossentropy: binaryCrossentropy,
-    kullbackLeiblerDivergence: kullbackLeiblerDivergence,
-    poisson: poisson,
-    cosineProximity: cosineProximity
-};
-// Porting note: This diverges from the PyKeras implementation and may need to
-// change based on (de)serialization requirements.
-function get(identifierOrFn) {
-    if (typeof identifierOrFn === 'string') {
-        if (identifierOrFn in exports.lossesMap) {
-            return exports.lossesMap[identifierOrFn];
-        }
-        var errMsg = "Unknown loss " + identifierOrFn;
-        if (identifierOrFn.toLowerCase().includes('softmaxcrossentropy')) {
-            errMsg = "Unknown loss " + identifierOrFn + ". " +
-                'Use "categoricalCrossentropy" as the string name for ' +
-                'tf.losses.softmaxCrossEntropy';
-        }
-        throw new errors_1.ValueError(errMsg);
-    }
-    else {
-        return identifierOrFn;
-    }
-}
-exports.get = get;
-//# sourceMappingURL=losses.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/metrics.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/metrics.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Built-in metrics.
- */
-var tfc = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var tfjs_core_1 = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var K = __webpack_require__(/*! ./backend/tfjs_backend */ "./node_modules/@tensorflow/tfjs-layers/dist/backend/tfjs_backend.js");
-var errors_1 = __webpack_require__(/*! ./errors */ "./node_modules/@tensorflow/tfjs-layers/dist/errors.js");
-var losses_1 = __webpack_require__(/*! ./losses */ "./node_modules/@tensorflow/tfjs-layers/dist/losses.js");
-var losses_2 = __webpack_require__(/*! ./losses */ "./node_modules/@tensorflow/tfjs-layers/dist/losses.js");
-var losses_3 = __webpack_require__(/*! ./losses */ "./node_modules/@tensorflow/tfjs-layers/dist/losses.js");
-var util = __webpack_require__(/*! ./utils/generic_utils */ "./node_modules/@tensorflow/tfjs-layers/dist/utils/generic_utils.js");
-function binaryAccuracy(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var threshold = tfc.mul(.5, tfc.onesLike(yPred));
-        var yPredThresholded = K.cast(tfc.greater(yPred, threshold), yTrue.dtype);
-        return tfc.mean(tfc.equal(yTrue, yPredThresholded), -1);
-    });
-}
-exports.binaryAccuracy = binaryAccuracy;
-function categoricalAccuracy(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () { return K.cast(tfc.equal(tfc.argMax(yTrue, -1), tfc.argMax(yPred, -1)), 'float32'); });
-}
-exports.categoricalAccuracy = categoricalAccuracy;
-function truePositives(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        return tfc.logicalAnd(yTrue.equal(1), yPred.equal(1)).sum().cast('float32');
-    });
-}
-function falseNegatives(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        return tfc.logicalAnd(yTrue.equal(1), yPred.equal(0)).sum().cast('float32');
-    });
-}
-function falsePositives(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        return tfc.logicalAnd(yTrue.equal(0), yPred.equal(1)).sum().cast('float32');
-    });
-}
-function precision(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var tp = truePositives(yTrue, yPred);
-        var fp = falsePositives(yTrue, yPred);
-        var denominator = tp.add(fp);
-        return tfc.where(tfc.greater(denominator, 0), tp.div(denominator), 0)
-            .cast('float32');
-    });
-}
-exports.precision = precision;
-function recall(yTrue, yPred) {
-    return tfjs_core_1.tidy(function () {
-        var tp = truePositives(yTrue, yPred);
-        var fn = falseNegatives(yTrue, yPred);
-        var denominator = tp.add(fn);
-        return tfc.where(tfc.greater(denominator, 0), tp.div(denominator), 0)
-            .cast('float32');
-    });
-}
-exports.recall = recall;
-function binaryCrossentropy(yTrue, yPred) {
-    return losses_2.binaryCrossentropy(yTrue, yPred);
-}
-exports.binaryCrossentropy = binaryCrossentropy;
-function sparseCategoricalAccuracy(yTrue, yPred) {
-    if (yTrue.rank === yPred.rank) {
-        yTrue = yTrue.squeeze([yTrue.rank - 1]);
-    }
-    yPred = yPred.argMax(-1);
-    if (yPred.dtype !== yTrue.dtype) {
-        yPred = yPred.asType(yTrue.dtype);
-    }
-    return tfc.equal(yTrue, yPred).asType('float32');
-}
-exports.sparseCategoricalAccuracy = sparseCategoricalAccuracy;
-function topKCategoricalAccuracy(yTrue, yPred) {
-    throw new errors_1.NotImplementedError();
-}
-exports.topKCategoricalAccuracy = topKCategoricalAccuracy;
-function sparseTopKCategoricalAccuracy(yTrue, yPred) {
-    throw new errors_1.NotImplementedError();
-}
-exports.sparseTopKCategoricalAccuracy = sparseTopKCategoricalAccuracy;
-// Aliases.
-exports.mse = losses_1.meanSquaredError;
-exports.MSE = losses_1.meanSquaredError;
-exports.mae = losses_1.meanAbsoluteError;
-exports.MAE = losses_1.meanAbsoluteError;
-exports.mape = losses_1.meanAbsolutePercentageError;
-exports.MAPE = losses_1.meanAbsolutePercentageError;
-exports.categoricalCrossentropy = losses_1.categoricalCrossentropy;
-exports.cosine = losses_1.cosineProximity;
-exports.sparseCategoricalCrossentropy = losses_1.sparseCategoricalCrossentropy;
-// TODO(cais, nielsene): Add serialize().
-exports.metricsMap = {
-    binaryAccuracy: binaryAccuracy,
-    categoricalAccuracy: categoricalAccuracy,
-    precision: precision,
-    categoricalCrossentropy: exports.categoricalCrossentropy,
-    sparseCategoricalCrossentropy: exports.sparseCategoricalCrossentropy,
-    mse: exports.mse,
-    MSE: exports.MSE,
-    mae: exports.mae,
-    MAE: exports.MAE,
-    mape: exports.mape,
-    MAPE: exports.MAPE,
-    cosine: exports.cosine
-};
-function get(identifier) {
-    if (typeof identifier === 'string' && identifier in exports.metricsMap) {
-        return exports.metricsMap[identifier];
-    }
-    else if (typeof identifier !== 'string' && identifier != null) {
-        return identifier;
-    }
-    else {
-        throw new errors_1.ValueError("Unknown metric " + identifier);
-    }
-}
-exports.get = get;
-/**
- * Get the shortcut function name.
- *
- * If the fn name is a string,
- *   directly return the string name.
- * If the function is included in metricsMap or lossesMap,
- *   return key of the map.
- *   - If the function relative to multiple keys,
- *     return the first found key as the function name.
- *   - If the function exists in both lossesMap and metricsMap,
- *     search lossesMap first.
- * If the function is not included in metricsMap or lossesMap,
- *   return the function name.
- *
- * @param fn loss function, metric function, or short cut name.
- * @returns Loss or Metric name in string.
- */
-function getLossOrMetricName(fn) {
-    util.assert(fn !== null, "Unknown LossOrMetricFn " + fn);
-    if (typeof fn === 'string') {
-        return fn;
-    }
-    else {
-        var fnName = void 0;
-        for (var _i = 0, _a = Object.keys(losses_3.lossesMap); _i < _a.length; _i++) {
-            var key = _a[_i];
-            if (losses_3.lossesMap[key] === fn) {
-                fnName = key;
-                break;
-            }
-        }
-        if (fnName !== undefined) {
-            return fnName;
-        }
-        for (var _b = 0, _c = Object.keys(exports.metricsMap); _b < _c.length; _b++) {
-            var key = _c[_b];
-            if (exports.metricsMap[key] === fn) {
-                fnName = key;
-                break;
-            }
-        }
-        if (fnName !== undefined) {
-            return fnName;
-        }
-        return fn.name;
-    }
-}
-exports.getLossOrMetricName = getLossOrMetricName;
-//# sourceMappingURL=metrics.js.map
-
-/***/ }),
-
 /***/ "./node_modules/@tensorflow/tfjs-layers/dist/tf-layers.esm.js":
 /*!********************************************************************!*\
   !*** ./node_modules/@tensorflow/tfjs-layers/dist/tf-layers.esm.js ***!
@@ -13226,693 +11269,11 @@ var extendStatics=function(e,t){return(extendStatics=Object.setPrototypeOf||{__p
 
 /***/ }),
 
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/utils/generic_utils.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/utils/generic_utils.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-/* Original source: utils/generic_utils.py */
-var tfjs_core_1 = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var errors_1 = __webpack_require__(/*! ../errors */ "./node_modules/@tensorflow/tfjs-layers/dist/errors.js");
-// tslint:enable
-/**
- * If `value` is an Array, equivalent to Python's `value * numValues`.
- * If `value` is not an Array, equivalent to Python's `[value] * numValues`
- */
-// tslint:disable-next-line:no-any
-function pyListRepeat(value, numValues) {
-    if (Array.isArray(value)) {
-        // tslint:disable-next-line:no-any
-        var newArray = [];
-        for (var i = 0; i < numValues; i++) {
-            newArray = newArray.concat(value);
-        }
-        return newArray;
-    }
-    else {
-        var newArray = new Array(numValues);
-        newArray.fill(value);
-        return newArray;
-    }
-}
-exports.pyListRepeat = pyListRepeat;
-function assert(val, message) {
-    if (!val) {
-        throw new errors_1.AssertionError(message);
-    }
-}
-exports.assert = assert;
-/**
- * Count the number of elements of the `array` that are equal to `reference`.
- */
-function count(array, refernce) {
-    var counter = 0;
-    for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
-        var item = array_1[_i];
-        if (item === refernce) {
-            counter++;
-        }
-    }
-    return counter;
-}
-exports.count = count;
-/**
- * If an array is of length 1, just return the first element. Otherwise, return
- * the full array.
- * @param tensors
- */
-function singletonOrArray(xs) {
-    if (xs.length === 1) {
-        return xs[0];
-    }
-    return xs;
-}
-exports.singletonOrArray = singletonOrArray;
-/**
- * Normalizes a list/tensor into a list.
- *
- * If a tensor is passed, we return
- * a list of size 1 containing the tensor.
- *
- * @param x target object to be normalized.
- */
-// tslint:disable-next-line:no-any
-function toList(x) {
-    if (Array.isArray(x)) {
-        return x;
-    }
-    return [x];
-}
-exports.toList = toList;
-/**
- * Generate a UID for a list
- */
-// tslint:disable-next-line:no-any
-function objectListUid(objs) {
-    var objectList = toList(objs);
-    var retVal = '';
-    for (var _i = 0, objectList_1 = objectList; _i < objectList_1.length; _i++) {
-        var obj = objectList_1[_i];
-        if (obj.id == null) {
-            throw new errors_1.ValueError("Object " + obj + " passed to objectListUid without an id");
-        }
-        if (retVal !== '') {
-            retVal = retVal + ', ';
-        }
-        retVal = retVal + Math.abs(obj.id);
-    }
-    return retVal;
-}
-exports.objectListUid = objectListUid;
-/**
- * Converts string to snake-case.
- * @param name
- */
-function toSnakeCase(name) {
-    var intermediate = name.replace(/(.)([A-Z][a-z0-9]+)/g, '$1_$2');
-    var insecure = intermediate.replace(/([a-z])([A-Z])/g, '$1_$2').toLowerCase();
-    /*
-     If the class is private the name starts with "_" which is not secure
-     for creating scopes. We prefix the name with "private" in this case.
-     */
-    if (insecure[0] !== '_') {
-        return insecure;
-    }
-    return 'private' + insecure;
-}
-exports.toSnakeCase = toSnakeCase;
-function toCamelCase(identifier) {
-    // quick return for empty string or single character strings
-    if (identifier.length <= 1) {
-        return identifier;
-    }
-    // Check for the underscore indicating snake_case
-    if (identifier.indexOf('_') === -1) {
-        return identifier;
-    }
-    return identifier.replace(/[_]+(\w|$)/g, function (m, p1) { return p1.toUpperCase(); });
-}
-exports.toCamelCase = toCamelCase;
-// tslint:disable-next-line:no-any
-var _GLOBAL_CUSTOM_OBJECTS = {};
-function serializeKerasObject(instance) {
-    if (instance === null || instance === undefined) {
-        return null;
-    }
-    var dict = {};
-    dict['className'] = instance.getClassName();
-    dict['config'] = instance.getConfig();
-    return dict;
-}
-exports.serializeKerasObject = serializeKerasObject;
-/**
- * Replace ndarray-style scalar objects in serialization objects with numbers.
- *
- * Background: In some versions of tf.keras, certain scalar values in the HDF5
- * model save file can be serialized as: `{'type': 'ndarray', 'value': num}`,
- * where in `num` is a plain number. This method converts such serialization
- * to a `number`.
- *
- * @param config The keras-format serialization object to be processed
- *   (in place).
- */
-function convertNDArrayScalarsInConfig(config) {
-    if (config == null || typeof config !== 'object') {
-        return;
-    }
-    else if (Array.isArray(config)) {
-        config.forEach(function (configItem) { return convertNDArrayScalarsInConfig(configItem); });
-    }
-    else {
-        var fields = Object.keys(config);
-        for (var _i = 0, fields_1 = fields; _i < fields_1.length; _i++) {
-            var field = fields_1[_i];
-            var value = config[field];
-            if (value != null && typeof value === 'object') {
-                if (!Array.isArray(value) && value['type'] === 'ndarray' &&
-                    typeof value['value'] === 'number') {
-                    config[field] = value['value'];
-                }
-                else {
-                    convertNDArrayScalarsInConfig(value);
-                }
-            }
-        }
-    }
-}
-/**
- * Deserialize a saved Keras Object
- * @param identifier either a string ID or a saved Keras dictionary
- * @param moduleObjects a list of Python class names to object constructors
- * @param customObjects a list of Python class names to object constructors
- * @param printableModuleName debug text for the object being reconstituted
- * @param fastWeightInit Optional flag to use fast weight initialization
- *   during deserialization. This is applicable to cases in which
- *   the initialization will be immediately overwritten by loaded weight
- *   values. Default: `false`.
- * @returns a TensorFlow.js Layers object
- */
-// tslint:disable:no-any
-function deserializeKerasObject(identifier, moduleObjects, customObjects, printableModuleName, fastWeightInit) {
-    if (moduleObjects === void 0) { moduleObjects = {}; }
-    if (customObjects === void 0) { customObjects = {}; }
-    if (printableModuleName === void 0) { printableModuleName = 'object'; }
-    if (fastWeightInit === void 0) { fastWeightInit = false; }
-    var _a, _b, _c;
-    // tslint:enable
-    if (typeof identifier === 'string') {
-        var functionName = identifier;
-        var fn = void 0;
-        if (functionName in customObjects) {
-            fn = customObjects[functionName];
-        }
-        else if (functionName in _GLOBAL_CUSTOM_OBJECTS) {
-            fn = _GLOBAL_CUSTOM_OBJECTS[functionName];
-        }
-        else {
-            fn = moduleObjects[functionName];
-            if (fn == null) {
-                throw new errors_1.ValueError("Unknown " + printableModuleName + ": " + identifier + ". " +
-                    "This may be due to one of the following reasons:\n" +
-                    ("1. The " + printableModuleName + " is defined in Python, in which ") +
-                    "case it needs to be ported to TensorFlow.js or your JavaScript " +
-                    "code.\n" +
-                    ("2. The custom " + printableModuleName + " is defined in JavaScript, ") +
-                    "but is not registered properly with " +
-                    "tf.serialization.registerClass().");
-                // TODO(cais): Add link to tutorial page on custom layers.
-            }
-        }
-        return fn;
-    }
-    else {
-        // In this case we are dealing with a Keras config dictionary.
-        var config = identifier;
-        if (config['className'] == null || config['config'] == null) {
-            throw new errors_1.ValueError(printableModuleName + ": Improper config format: " +
-                (JSON.stringify(config) + ".\n") +
-                "'className' and 'config' must set.");
-        }
-        var className = config['className'];
-        var cls = void 0, fromConfig = void 0;
-        if (className in customObjects) {
-            _a = customObjects[className], cls = _a[0], fromConfig = _a[1];
-        }
-        else if (className in _GLOBAL_CUSTOM_OBJECTS) {
-            _b = _GLOBAL_CUSTOM_OBJECTS['className'], cls = _b[0], fromConfig = _b[1];
-        }
-        else if (className in moduleObjects) {
-            _c = moduleObjects[className], cls = _c[0], fromConfig = _c[1];
-        }
-        if (cls == null) {
-            throw new errors_1.ValueError("Unknown " + printableModuleName + ": " + className + ". " +
-                "This may be due to one of the following reasons:\n" +
-                ("1. The " + printableModuleName + " is defined in Python, in which ") +
-                "case it needs to be ported to TensorFlow.js or your JavaScript " +
-                "code.\n" +
-                ("2. The custom " + printableModuleName + " is defined in JavaScript, ") +
-                "but is not registered properly with " +
-                "tf.serialization.registerClass().");
-            // TODO(cais): Add link to tutorial page on custom layers.
-        }
-        if (fromConfig != null) {
-            // Porting notes: Instead of checking to see whether fromConfig accepts
-            // customObjects, we create a customObjects dictionary and tack it on to
-            // config['config'] as config['config'].customObjects. Objects can use it,
-            // if they want.
-            // tslint:disable-next-line:no-any
-            var customObjectsCombined = {};
-            for (var _i = 0, _d = Object.keys(_GLOBAL_CUSTOM_OBJECTS); _i < _d.length; _i++) {
-                var key = _d[_i];
-                customObjectsCombined[key] = _GLOBAL_CUSTOM_OBJECTS[key];
-            }
-            for (var _e = 0, _f = Object.keys(customObjects); _e < _f.length; _e++) {
-                var key = _f[_e];
-                customObjectsCombined[key] = customObjects[key];
-            }
-            // Add the customObjects to config
-            var nestedConfig = config['config'];
-            nestedConfig['customObjects'] = customObjectsCombined;
-            var backupCustomObjects = __assign({}, _GLOBAL_CUSTOM_OBJECTS);
-            for (var _g = 0, _h = Object.keys(customObjects); _g < _h.length; _g++) {
-                var key = _h[_g];
-                _GLOBAL_CUSTOM_OBJECTS[key] = customObjects[key];
-            }
-            convertNDArrayScalarsInConfig(config['config']);
-            var returnObj = fromConfig(cls, config['config'], customObjects, fastWeightInit);
-            _GLOBAL_CUSTOM_OBJECTS = __assign({}, backupCustomObjects);
-            return returnObj;
-        }
-        else {
-            // Then `cls` may be a function returning a class.
-            // In this case by convention `config` holds
-            // the kwargs of the function.
-            var backupCustomObjects = __assign({}, _GLOBAL_CUSTOM_OBJECTS);
-            for (var _j = 0, _k = Object.keys(customObjects); _j < _k.length; _j++) {
-                var key = _k[_j];
-                _GLOBAL_CUSTOM_OBJECTS[key] = customObjects[key];
-            }
-            // In python this is **config['config'], for tfjs-layers we require
-            // classes that use this fall-through construction method to take
-            // a config interface that mimics the expansion of named parameters.
-            var returnObj = new cls(config['config']);
-            _GLOBAL_CUSTOM_OBJECTS = __assign({}, backupCustomObjects);
-            return returnObj;
-        }
-    }
-}
-exports.deserializeKerasObject = deserializeKerasObject;
-/**
- * Compares two numbers for sorting.
- * @param a
- * @param b
- */
-function numberCompare(a, b) {
-    return (a < b) ? -1 : ((a > b) ? 1 : 0);
-}
-exports.numberCompare = numberCompare;
-/**
- * Comparison of two numbers for reverse sorting.
- * @param a
- * @param b
- */
-function reverseNumberCompare(a, b) {
-    return -1 * numberCompare(a, b);
-}
-exports.reverseNumberCompare = reverseNumberCompare;
-/**
- * Convert a string into the corresponding DType.
- * @param dtype
- * @returns An instance of DType.
- */
-function stringToDType(dtype) {
-    switch (dtype) {
-        case 'float32':
-            return 'float32';
-        default:
-            throw new errors_1.ValueError("Invalid dtype: " + dtype);
-    }
-}
-exports.stringToDType = stringToDType;
-/**
- * Test the element-by-element equality of two Arrays of strings.
- * @param xs First array of strings.
- * @param ys Second array of strings.
- * @returns Wether the two arrays are all equal, element by element.
- */
-function stringsEqual(xs, ys) {
-    if (xs == null || ys == null) {
-        return xs === ys;
-    }
-    if (xs.length !== ys.length) {
-        return false;
-    }
-    for (var i = 0; i < xs.length; ++i) {
-        if (xs[i] !== ys[i]) {
-            return false;
-        }
-    }
-    return true;
-}
-exports.stringsEqual = stringsEqual;
-/**
- * Get the unique elements of an array.
- * @param xs Array.
- * @returns An Array consisting of the unique elements in `xs`.
- */
-function unique(xs) {
-    if (xs == null) {
-        return xs;
-    }
-    var out = [];
-    // TODO(cais): Maybe improve performance by sorting.
-    for (var _i = 0, xs_1 = xs; _i < xs_1.length; _i++) {
-        var x = xs_1[_i];
-        if (out.indexOf(x) === -1) {
-            out.push(x);
-        }
-    }
-    return out;
-}
-exports.unique = unique;
-/**
- * Determine if an Object is empty (i.e., does not have own properties).
- * @param obj Object
- * @returns Whether the Object is empty.
- * @throws ValueError: If object is `null` or `undefined`.
- */
-function isObjectEmpty(obj) {
-    if (obj == null) {
-        throw new errors_1.ValueError("Invalid value in obj: " + JSON.stringify(obj));
-    }
-    for (var key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            return false;
-        }
-    }
-    return true;
-}
-exports.isObjectEmpty = isObjectEmpty;
-/**
- * Helper function used to build type union/enum run-time checkers.
- * @param values The list of allowed values.
- * @param label A string name for the type
- * @param value The value to test.
- * @throws ValueError: If the value is not in values nor `undefined`/`null`.
- */
-function checkStringTypeUnionValue(values, label, value) {
-    if (value == null) {
-        return;
-    }
-    if (values.indexOf(value) < 0) {
-        throw new errors_1.ValueError(value + " is not a valid " + label + ".  Valid values are " + values + " or null/undefined.");
-    }
-}
-exports.checkStringTypeUnionValue = checkStringTypeUnionValue;
-/**
- * Helper function for verifying the types of inputs.
- *
- * Ensures that the elements of `x` are all of type `expectedType`.
- * Also verifies that the length of `x` is within bounds.
- *
- * @param x Object to test.
- * @param expectedType The string expected type of all of the elements in the
- * Array.
- * @param minLength Return false if x.length is less than this.
- * @param maxLength Return false if x.length is greater than this.
- * @returns true if and only if `x` is an `Array<expectedType>` with
- * length >= `minLength` and <= `maxLength`.
- */
-// tslint:disable:no-any
-function checkArrayTypeAndLength(x, expectedType, minLength, maxLength) {
-    if (minLength === void 0) { minLength = 0; }
-    if (maxLength === void 0) { maxLength = Infinity; }
-    assert(minLength >= 0);
-    assert(maxLength >= minLength);
-    return (Array.isArray(x) && x.length >= minLength && x.length <= maxLength &&
-        x.every(function (e) { return typeof e === expectedType; }));
-}
-exports.checkArrayTypeAndLength = checkArrayTypeAndLength;
-// tslint:enable:no-any
-/**
- * Assert that a value or an array of value are positive integer.
- *
- * @param value The value being asserted on. May be a single number or an array
- *   of numbers.
- * @param name Name of the value, used to make the error message.
- */
-function assertPositiveInteger(value, name) {
-    if (Array.isArray(value)) {
-        tfjs_core_1.util.assert(value.length > 0, function () { return name + " is unexpectedly an empty array."; });
-        value.forEach(function (v, i) { return assertPositiveInteger(v, "element " + (i + 1) + " of " + name); });
-    }
-    else {
-        tfjs_core_1.util.assert(Number.isInteger(value) && value > 0, function () { return "Expected " + name + " to be a positive integer, but got " +
-            (formatAsFriendlyString(value) + "."); });
-    }
-}
-exports.assertPositiveInteger = assertPositiveInteger;
-/**
- * Format a value into a display-friendly, human-readable fashion.
- *
- * - `null` is formatted as `'null'`
- * - Strings are formated with flanking pair of quotes.
- * - Arrays are formatted with flanking pair of square brackets.
- *
- * @param value The value to display.
- * @return Formatted string.
- */
-// tslint:disable-next-line:no-any
-function formatAsFriendlyString(value) {
-    if (value === null) {
-        return 'null';
-    }
-    else if (Array.isArray(value)) {
-        return '[' + value.map(function (v) { return formatAsFriendlyString(v); }).join(',') + ']';
-    }
-    else if (typeof value === 'string') {
-        return "\"" + value + "\"";
-    }
-    else {
-        return "" + value;
-    }
-}
-exports.formatAsFriendlyString = formatAsFriendlyString;
-/**
- * Returns a function `f2` (decorator) which wraps the original function
- * `f`. `f2` guarantees that `f` can be called at most once
- * every `waitMs` ms. If `f2` is called more often, it will return
- * the last returned result of `f`.
- *
- * @param f The original function `f` to wrap.
- * @param waitMs The time between two consecutive calls to `f` in ms.
- */
-function debounce(f, waitMs) {
-    var lastTime = tfjs_core_1.util.now();
-    var lastResult;
-    var f2 = function () {
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        var now = tfjs_core_1.util.now();
-        if (now - lastTime < waitMs) {
-            return lastResult;
-        }
-        lastTime = now;
-        lastResult = f.apply(void 0, args);
-        return lastResult;
-    };
-    return f2;
-}
-exports.debounce = debounce;
-//# sourceMappingURL=generic_utils.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@tensorflow/tfjs-layers/dist/utils/math_utils.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@tensorflow/tfjs-layers/dist/utils/math_utils.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @license
- * Copyright 2018 Google LLC
- *
- * Use of this source code is governed by an MIT-style
- * license that can be found in the LICENSE file or at
- * https://opensource.org/licenses/MIT.
- * =============================================================================
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Math utility functions.
- *
- * This file contains some frequently used math function that operates on
- * number[] or Float32Array and return a number. Many of these functions are
- * not-so-thick wrappers around TF.js Core functions. But they offer the
- * convenience of
- * 1) not having to convert the inputs into Tensors,
- * 2) not having to convert the returned Tensors to numbers.
- */
-var tfc = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var tfjs_core_1 = __webpack_require__(/*! @tensorflow/tfjs-core */ "./node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js");
-var errors_1 = __webpack_require__(/*! ../errors */ "./node_modules/@tensorflow/tfjs-layers/dist/errors.js");
-/**
- * Determine if a number is an integer.
- */
-function isInteger(x) {
-    return x === parseInt(x.toString(), 10);
-}
-exports.isInteger = isInteger;
-/**
- * Calculate the product of an array of numbers.
- * @param array The array to calculate the product over.
- * @param begin Beginning index, inclusive.
- * @param end Ending index, exclusive.
- * @return The product.
- */
-function arrayProd(array, begin, end) {
-    if (begin == null) {
-        begin = 0;
-    }
-    if (end == null) {
-        end = array.length;
-    }
-    var prod = 1;
-    for (var i = begin; i < end; ++i) {
-        prod *= array[i];
-    }
-    return prod;
-}
-exports.arrayProd = arrayProd;
-/**
- * A helper function transforms the two input types to an instance of Tensor1D,
- * so the return value can be fed directly into various TF.js Core functions.
- * @param array
- */
-function toArray1D(array) {
-    array = Array.isArray(array) ? new Float32Array(array) : array;
-    return tfjs_core_1.tensor1d(array);
-}
-/**
- * Compute minimum value.
- * @param array
- * @return minimum value.
- */
-function min(array) {
-    return tfc.min(toArray1D(array)).dataSync()[0];
-}
-exports.min = min;
-/**
- * Compute maximum value.
- * @param array
- * @return maximum value
- */
-function max(array) {
-    return tfc.max(toArray1D(array)).dataSync()[0];
-}
-exports.max = max;
-/**
- * Compute sum of array.
- * @param array
- * @return The sum.
- */
-function sum(array) {
-    return tfc.sum(toArray1D(array)).dataSync()[0];
-}
-exports.sum = sum;
-/**
- * Compute mean of array.
- * @param array
- * @return The mean.
- */
-function mean(array) {
-    return sum(array) / array.length;
-}
-exports.mean = mean;
-/**
- * Compute variance of array.
- * @param array
- * @return The variance.
- */
-function variance(array) {
-    var demeaned = tfc.sub(toArray1D(array), tfjs_core_1.scalar(mean(array)));
-    var sumSquare = tfc.sum(tfc.mulStrict(demeaned, demeaned)).dataSync()[0];
-    return sumSquare / array.length;
-}
-exports.variance = variance;
-/**
- * Compute median of array.
- * @param array
- * @return The median value.
- */
-function median(array) {
-    var arraySorted = array.slice().sort(function (a, b) { return a - b; });
-    var lowIdx = Math.floor((arraySorted.length - 1) / 2);
-    var highIdx = Math.ceil((arraySorted.length - 1) / 2);
-    if (lowIdx === highIdx) {
-        return arraySorted[lowIdx];
-    }
-    return (arraySorted[lowIdx] + arraySorted[highIdx]) / 2;
-}
-exports.median = median;
-/**
- * Generate an array of integers in [begin, end).
- * @param begin Beginning integer, inclusive.
- * @param end Ending integer, exclusive.
- * @returns Range array.
- * @throws ValueError, iff `end` < `begin`.
- */
-function range(begin, end) {
-    if (end < begin) {
-        throw new errors_1.ValueError("end (" + end + ") < begin (" + begin + ") is forbidden.");
-    }
-    var out = [];
-    for (var i = begin; i < end; ++i) {
-        out.push(i);
-    }
-    return out;
-}
-exports.range = range;
-//# sourceMappingURL=math_utils.js.map
-
-/***/ }),
-
 /***/ "./node_modules/@tensorflow/tfjs/dist/tf.esm.js":
 /*!******************************************************!*\
   !*** ./node_modules/@tensorflow/tfjs/dist/tf.esm.js ***!
   \******************************************************/
-/*! exports provided: data, version, AdadeltaOptimizer, AdagradOptimizer, AdamOptimizer, AdamaxOptimizer, DataStorage, ENV, Environment, KernelBackend, MomentumOptimizer, Optimizer, RMSPropOptimizer, Rank, Reduction, SGDOptimizer, Tensor, TensorBuffer, Variable, abs, acos, acosh, add, addN, addStrict, all, any, argMax, argMin, asin, asinh, atan, atan2, atanh, avgPool, backend, backend_util, basicLSTMCell, batchNorm, batchNorm2d, batchNorm3d, batchNorm4d, batchNormalization, batchNormalization2d, batchNormalization3d, batchNormalization4d, batchToSpaceND, browser, buffer, cast, ceil, clipByValue, clone, complex, concat, concat1d, concat2d, concat3d, concat4d, conv1d, conv2d, conv2dDerFilter, conv2dTranspose, conv3d, cos, cosh, cumsum, customGrad, deprecationWarn, depthToSpace, depthwiseConv2d, disableDeprecationWarnings, dispose, disposeVariables, div, divStrict, dot, dropout, elu, enableDebugMode, enableProdMode, environment, equal, equalStrict, erf, exp, expandDims, expm1, eye, fft, fill, findBackend, findBackendFactory, floor, floorDiv, frame, fused, gather, gatherND, getBackend, grad, grads, greater, greaterEqual, greaterEqualStrict, greaterStrict, hammingWindow, hannWindow, ifft, imag, image, io, irfft, isFinite, isInf, isNaN, keep, leakyRelu, less, lessEqual, lessEqualStrict, lessStrict, linalg, linspace, localResponseNormalization, log, log1p, logSigmoid, logSoftmax, logSumExp, logicalAnd, logicalNot, logicalOr, logicalXor, losses, matMul, math, max, maxPool, maximum, maximumStrict, mean, memory, min, minimum, minimumStrict, mod, modStrict, moments, movingAverage, mul, mulStrict, multiRNNCell, multinomial, neg, nextFrame, norm, notEqual, notEqualStrict, oneHot, ones, onesLike, op, outerProduct, pad, pad1d, pad2d, pad3d, pad4d, pool, pow, powStrict, prelu, print, prod, profile, rand, randomNormal, randomUniform, range, ready, real, reciprocal, registerBackend, relu, removeBackend, reshape, reverse, reverse1d, reverse2d, reverse3d, reverse4d, rfft, round, rsqrt, scalar, scatterND, selu, separableConv2d, serialization, setBackend, setPlatform, setdiff1dAsync, sigmoid, sign, signal, sin, sinh, slice, slice1d, slice2d, slice3d, slice4d, softmax, softplus, spaceToBatchND, sparseToDense, spectral, split, sqrt, square, squaredDifference, squaredDifferenceStrict, squeeze, stack, step, stridedSlice, sub, subStrict, sum, tan, tanh, tensor, tensor1d, tensor2d, tensor3d, tensor4d, tensor5d, tensor6d, tensor_util, test_util, tidy, tile, time, topk, train, transpose, truncatedNormal, unsortedSegmentSum, unstack, util, valueAndGrad, valueAndGrads, variable, variableGrads, version_core, webgl, where, whereAsync, zeros, zerosLike, constraints, initializers, layers, metrics, models, regularizers, CallbackList, CustomCallback, History, Callback, callbacks, EarlyStopping, InputSpec, SymbolicTensor, LayersModel, input, loadLayersModel, model, registerCallbackConstructor, sequential, RNN, Sequential, LayerVariable, version_layers, GraphModel, loadGraphModel, deregisterOp, registerOp, version_converter */
+/*! exports provided: AdadeltaOptimizer, AdagradOptimizer, AdamOptimizer, AdamaxOptimizer, DataStorage, ENV, Environment, KernelBackend, MomentumOptimizer, Optimizer, RMSPropOptimizer, Rank, Reduction, SGDOptimizer, Tensor, TensorBuffer, Variable, abs, acos, acosh, add, addN, addStrict, all, any, argMax, argMin, asin, asinh, atan, atan2, atanh, avgPool, backend, backend_util, basicLSTMCell, batchNorm, batchNorm2d, batchNorm3d, batchNorm4d, batchNormalization, batchNormalization2d, batchNormalization3d, batchNormalization4d, batchToSpaceND, browser, buffer, cast, ceil, clipByValue, clone, complex, concat, concat1d, concat2d, concat3d, concat4d, conv1d, conv2d, conv2dDerFilter, conv2dTranspose, conv3d, cos, cosh, cumsum, customGrad, deprecationWarn, depthToSpace, depthwiseConv2d, disableDeprecationWarnings, dispose, disposeVariables, div, divStrict, dot, dropout, elu, enableDebugMode, enableProdMode, environment, equal, equalStrict, erf, exp, expandDims, expm1, eye, fft, fill, findBackend, findBackendFactory, floor, floorDiv, frame, fused, gather, gatherND, getBackend, grad, grads, greater, greaterEqual, greaterEqualStrict, greaterStrict, hammingWindow, hannWindow, ifft, imag, image, io, irfft, isFinite, isInf, isNaN, keep, leakyRelu, less, lessEqual, lessEqualStrict, lessStrict, linalg, linspace, localResponseNormalization, log, log1p, logSigmoid, logSoftmax, logSumExp, logicalAnd, logicalNot, logicalOr, logicalXor, losses, matMul, math, max, maxPool, maximum, maximumStrict, mean, memory, min, minimum, minimumStrict, mod, modStrict, moments, movingAverage, mul, mulStrict, multiRNNCell, multinomial, neg, nextFrame, norm, notEqual, notEqualStrict, oneHot, ones, onesLike, op, outerProduct, pad, pad1d, pad2d, pad3d, pad4d, pool, pow, powStrict, prelu, print, prod, profile, rand, randomNormal, randomUniform, range, ready, real, reciprocal, registerBackend, relu, removeBackend, reshape, reverse, reverse1d, reverse2d, reverse3d, reverse4d, rfft, round, rsqrt, scalar, scatterND, selu, separableConv2d, serialization, setBackend, setPlatform, setdiff1dAsync, sigmoid, sign, signal, sin, sinh, slice, slice1d, slice2d, slice3d, slice4d, softmax, softplus, spaceToBatchND, sparseToDense, spectral, split, sqrt, square, squaredDifference, squaredDifferenceStrict, squeeze, stack, step, stridedSlice, sub, subStrict, sum, tan, tanh, tensor, tensor1d, tensor2d, tensor3d, tensor4d, tensor5d, tensor6d, tensor_util, test_util, tidy, tile, time, topk, train, transpose, truncatedNormal, unsortedSegmentSum, unstack, util, valueAndGrad, valueAndGrads, variable, variableGrads, version_core, webgl, where, whereAsync, zeros, zerosLike, constraints, initializers, layers, metrics, models, regularizers, CallbackList, CustomCallback, History, Callback, callbacks, EarlyStopping, InputSpec, SymbolicTensor, LayersModel, input, loadLayersModel, model, registerCallbackConstructor, sequential, RNN, Sequential, LayerVariable, version_layers, GraphModel, loadGraphModel, deregisterOp, registerOp, version_converter, data, version */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64946,7 +62307,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

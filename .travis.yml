@@ -23,7 +23,7 @@ script:
   - rm -rf node_modules # omit from the tarball, since we skip cleanup
 # deploy:
    skip_cleanup: true # prevents travis from deleting the build
-  provider: heroku
+    provider: heroku
    app: visionmlbymc # see README
    api_key:
     secure: 's0nC92O18KicekrBtFBXclZTjkNrY/Y2t3xrD1aKL4i9tLQXJYGOEHcZZ/CMR6xi44+pNatMqHxXfZ1D74yeqM639Wtp2N1fuQDdNz8F1SLbqZlK+zjoUHqD6xbFRY2sPS6f0ZC853Tm+/X9EynYwYbURXF/K5AISqedUGuOPx6CJF/byWUXacOPxQzkphBE/OTo5RldVTAjTsxrXOr9IJVN5mEQ71we/6efjOT9rImNV0fqO3V6MhkUPAhRsXgnh8bR0S2UuvRk6ahrzVpq020dd4j9AU/vvJW20tqy2nluaDKNC3z78X2jBgqxMZsfdb3E65aaAdNWQ6yuPYs3Q0XKVTgVdwUDb/HsfV6LAea8ZpdcD4zLKBBQ24m+/V9M/MOPsb6yDwPe6I3hiQ3yQsP7HrcvEpZ8jatoUAOUGgy9Dg0G1wa4kbGqWH12AgYmU3a6nFD+uQfBHiW8aIyGtMQlSWYFBM1ucGFMwOmMLm4fBckEvNp8GnVfR+RjxefcfecMA74bsXvgaZBMTjr8gwxY3hXSappjr2vVy3JJa8KUmbs1NNslAWOeVOxBD+PAboHy58nZrdRhpumfbas6qZFTUB3WYDpM3DRY/bAzKrjxuCyQN4GXXvrtAC7njBuAJhtnLQk8/3CwmuSWolB2updZnEGU0ng4uZYPYpWwhZ0=' # see README

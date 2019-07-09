@@ -1,3 +1,42 @@
-body{font-family:sans-serif}body a{text-decoration:none}body label{display:block}body nav a{display:inline-block}body form div{margin:1em;display:inline-block}.position{position:fixed;top:30px;left:30px}.content{padding:10px;text-decoration:none}
+body {
+  font-family: sans-serif;
+}
+body a {
+  text-decoration: none;
+}
+body label {
+  display: block;
+}
+body nav a {
+  display: inline-block;
+}
+body form div {
+  margin: 1em;
+  display: inline-block;
+}
+.position {
+  position: fixed;
+  top: 30px;
+  left: 25%;
+  right: 25%;
+}
+.content {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.container-video {
+  margin-bottom: 300px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .position {
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 500px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map*/

@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {getPredictions} from '../store/predictions'
-import {PredictionDetails} from './predictionsdetails'
+import {PredictionDetails} from './Predictionsdetails'
 
 class Predictions extends React.Component {
   async componentDidMount() {
@@ -33,16 +33,15 @@ class Predictions extends React.Component {
 
   render() {
     const {predictions} = this.props.predictions
-    console.log(predictions)
     return (
-      <div>
-        <h4>Predictions </h4>
+      <div className="container">
+        <h4 className="center">Predictions </h4>
         <table className="highlight">
           <thead>
             <tr>
               <th>id </th>
               <th>Date </th>
-              <th>Inventory %Score</th>
+              <th>Item - %Prediction</th>
             </tr>
           </thead>
 

@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React   from 'react'
 import {Route, Switch} from 'react-router-dom'
 import {About, CameraApp, Predictions} from './components'
-import {me} from './store'
+// import {me} from './store'
 
 /**
  * COMPONENT
