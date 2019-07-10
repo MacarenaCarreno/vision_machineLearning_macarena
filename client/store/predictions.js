@@ -35,8 +35,6 @@ export const getPredictions = () => async dispatch => {
 }
 
 export const addPredictions = newPredictions => async dispatch => {
-  console.log('DATA in STORE', newPredictions)
-
   try {
     const {data} = await axios.post(`/api/prediction/`, newPredictions)
 

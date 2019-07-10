@@ -14,8 +14,6 @@ router.get('/', async (req, res, next) => {
 })
 
 router.post('/', async (req, res, next) => {
-  console.log('REQBODY', req.body)
-
   try {
     const prediction = await Prediction.create(req.body)
     const addPredictionDetail = await req.body.predictionDetail.map(
@@ -25,10 +23,8 @@ router.post('/', async (req, res, next) => {
       }
     )
 
-    // const addPredictionDetail = await PredictionDetail.create(req.body)
     res.status(201).json(addPredictionDetail)
   } catch (err) {
     next(err)
   }
 })
- 

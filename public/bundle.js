@@ -123,6 +123,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _script_logos_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../script/logos.js */ "./script/logos.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
@@ -139,7 +141,9 @@ var About = function About() {
     className: "grey-text"
   }, "STACK "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row center-align"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Back end and Front End"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), _script_logos_js__WEBPACK_IMPORTED_MODULE_1__["logos"].map(function (el) {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "teal-text"
+  }, "Back end and Front End"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), _script_logos_js__WEBPACK_IMPORTED_MODULE_1__["logos"].map(function (el) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col s12 m6 l4 xl4",
       key: el.id
@@ -152,14 +156,19 @@ var About = function About() {
       src: el.img
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "center promo promo-example"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: el.link,
+      target: "_blank"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "promo-caption"
-    }, el.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, el.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "light center"
     }, " ", el.description))));
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row center-align"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Machine Learning Tools"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), _script_logos_js__WEBPACK_IMPORTED_MODULE_1__["machineLearning"].map(function (el) {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "teal-text"
+  }, "Machine Learning Tools"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), _script_logos_js__WEBPACK_IMPORTED_MODULE_1__["machineLearning"].map(function (el) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col s12 m6 l6 xl6",
       key: el.id
@@ -173,7 +182,8 @@ var About = function About() {
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "center promo promo-example"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: el.link
+      href: el.link,
+      target: "_blank"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "promo-caption"
     }, el.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -197,11 +207,15 @@ var About = function About() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _tensorflow_models_coco_ssd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @tensorflow-models/coco-ssd */ "./node_modules/@tensorflow-models/coco-ssd/dist/coco-ssd.esm.js");
-/* harmony import */ var _tensorflow_tfjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tensorflow/tfjs */ "./node_modules/@tensorflow/tfjs/dist/tf.esm.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_predictions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/predictions */ "./client/store/predictions.js");
+/* harmony import */ var _tensorflow_models_coco_ssd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tensorflow-models/coco-ssd */ "./node_modules/@tensorflow-models/coco-ssd/dist/coco-ssd.esm.js");
+/* harmony import */ var _tensorflow_tfjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @tensorflow/tfjs */ "./node_modules/@tensorflow/tfjs/dist/tf.esm.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -226,23 +240,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var CameraApp =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(CameraApp, _React$Component);
 
-  function CameraApp() {
-    var _getPrototypeOf2;
-
+  function CameraApp(props) {
     var _this;
 
     _classCallCheck(this, CameraApp);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(CameraApp)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CameraApp).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "videoRef", react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef());
 
@@ -272,25 +281,73 @@ function (_React$Component) {
         var width = prediction.bbox[2];
         var height = prediction.bbox[3] - 100; // Draw the bounding box.
 
-        ctx.strokeStyle = '#00FFFF';
+        ctx.strokeStyle = '#fafafa';
         ctx.lineWidth = 4;
         ctx.strokeRect(x, y, width, height); // Draw the label background.
 
-        ctx.fillStyle = '#00FFFF';
+        ctx.fillStyle = '#fafafa';
         var textWidth = ctx.measureText(prediction["class"]).width;
+        var scoreWidth = ctx.measureText(prediction.score).width;
         var textHeight = parseInt(font, 10); // base 10
 
-        ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
+        ctx.fillRect(x, y, textWidth + scoreWidth + 4, textHeight + 4);
       });
       predictions.forEach(function (prediction) {
         var x = prediction.bbox[0];
         var y = prediction.bbox[1]; // Draw the text last to ensure it's on top.
 
+        var score = Math.round(prediction.score * 1000) / 1000 * 100;
         ctx.fillStyle = '#000000';
-        ctx.fillText(prediction["class"], x, y);
+        ctx.fillText(prediction["class"] + ' ' + score + '%', x, y);
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "handleClick",
+    /*#__PURE__*/
+    _asyncToGenerator(
+    /*#__PURE__*/
+    regeneratorRuntime.mark(function _callee() {
+      var model, video, savePred;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              model = _this.state.model;
+              video = _this.videoRef.current;
+
+              savePred = function savePred(video2, model2) {
+                model2.detect(video2).then(function (predictions) {
+                  var predDetails = predictions.map(function (pred) {
+                    return {
+                      "class": pred["class"],
+                      score: pred.score
+                    };
+                  });
+
+                  _this.props.addPredictions({
+                    title: 'test',
+                    predictionDetail: [predDetails[0]]
+                  });
+
+                  _this.setState({
+                    "class": predDetails[0]["class"],
+                    score: predDetails[0].score
+                  });
+                });
+              };
+
+              savePred(video, model);
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    })));
+
+    _this.state = {};
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -314,9 +371,13 @@ function (_React$Component) {
             };
           });
         });
-        var modelPromise = _tensorflow_models_coco_ssd__WEBPACK_IMPORTED_MODULE_2__["load"]();
+        var modelPromise = _tensorflow_models_coco_ssd__WEBPACK_IMPORTED_MODULE_3__["load"]();
         Promise.all([modelPromise, webCamPromise]).then(function (values) {
           _this2.detectFrame(_this2.videoRef.current, values[0]);
+
+          _this2.setState({
+            model: values[0]
+          });
         })["catch"](function (error) {
           console.error(error);
         });
@@ -325,22 +386,29 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var checkVideo = document.getElementsByTagName('video');
-      console.log(checkVideo);
-      console.log(checkVideo[0]);
+      var type = this.state["class"];
+      var score = Math.round(this.state.score * 1000) / 1000 * 100;
+      console.log('State', this.state);
+      console.log(type, score);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "center-align"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.state["class"] ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+        className: "grey-text text-darken-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "grey-text text-darken-5"
+      }, "Last Save "), "Item ", type, " | Score ", score, "%")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button" // onClick={this.handleClick}
-        ,
+        type: "button",
+        onClick: this.handleClick,
         className: "waves-effect waves-light btn "
-      }, "Save Data")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container-video center"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "The model is loading..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Save Data")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), !this.state.model ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "grey-text text-lighten-2"
+      }, "The model is loading..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "preloader-wrapper big active"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "spinner-layer spinner-blue-only"
@@ -356,7 +424,9 @@ function (_React$Component) {
         className: "circle-clipper right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "circle"
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+      }))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container-video center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         className: "position",
         autoPlay: true,
         playsInline: true,
@@ -376,7 +446,22 @@ function (_React$Component) {
   return CameraApp;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (CameraApp);
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    predictions: state //categories: state.closet.categories
+
+  };
+};
+
+var mapDispatch = function mapDispatch(dispatch) {
+  return {
+    addPredictions: function addPredictions(prediction) {
+      return dispatch(Object(_store_predictions__WEBPACK_IMPORTED_MODULE_2__["addPredictions"])(prediction));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatch)(CameraApp));
 
 /***/ }),
 
@@ -412,10 +497,12 @@ var Footer = function Footer() {
     className: "white-text"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "grey-text text-lighten-3",
-    href: "www.macarenacg.com"
+    href: "https://www.macarenacg.com",
+    target: "_blank"
   }, "Macarena Carreno")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "grey-text text-lighten-3",
-    href: "https://github.com/MacarenaCarreno/vision_machineLearning_macarena"
+    href: "https://github.com/MacarenaCarreno/vision_machineLearning_macarena",
+    target: "_blank"
   }, "GitHub")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-copyright"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1039,29 +1126,28 @@ var addPredictions = function addPredictions(newPredictions) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                console.log('DATA in STORE', newPredictions);
-                _context2.prev = 1;
-                _context2.next = 4;
+                _context2.prev = 0;
+                _context2.next = 3;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/prediction/", newPredictions);
 
-              case 4:
+              case 3:
                 _ref4 = _context2.sent;
                 data = _ref4.data;
                 dispatch(addPrediction(data));
-                _context2.next = 12;
+                _context2.next = 11;
                 break;
 
-              case 9:
-                _context2.prev = 9;
-                _context2.t0 = _context2["catch"](1);
+              case 8:
+                _context2.prev = 8;
+                _context2.t0 = _context2["catch"](0);
                 console.error(_context2.t0);
 
-              case 12:
+              case 11:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, null, [[1, 9]]);
+        }, _callee2, null, [[0, 8]]);
       }));
 
       return function (_x2) {

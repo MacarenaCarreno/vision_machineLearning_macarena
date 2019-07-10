@@ -17,7 +17,8 @@ const Footer = () => {
               <li>
                 <a
                   className="grey-text text-lighten-3"
-                  href="www.macarenacg.com"
+                  href="https://www.macarenacg.com"
+                  target="_blank"
                 >
                   Macarena Carreno
                 </a>
@@ -26,6 +27,7 @@ const Footer = () => {
                 <a
                   className="grey-text text-lighten-3"
                   href="https://github.com/MacarenaCarreno/vision_machineLearning_macarena"
+                  target="_blank"
                 >
                   GitHub
                 </a>

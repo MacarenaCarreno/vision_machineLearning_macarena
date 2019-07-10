@@ -1,5 +1,6 @@
 import React from 'react'
 import {logos, machineLearning} from '../../script/logos.js'
+import {Link} from 'react-router-dom'
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
       <div className="row">
         <h4 className="grey-text">STACK </h4>
         <div className="row center-align">
-          <h5>Back end and Front End</h5>
+          <h5 className="teal-text">Back end and Front End</h5>
           <hr />
 
           {logos.map(el => (
@@ -27,7 +28,9 @@ const About = () => {
                   src={el.img}
                 />
                 <div className="center promo promo-example">
-                  <p className="promo-caption">{el.name}</p>
+                  <a href={el.link} target="_blank">
+                    <p className="promo-caption">{el.name}</p>
+                  </a>
                   <p className="light center"> {el.description}</p>
                 </div>
               </div>
@@ -35,7 +38,7 @@ const About = () => {
           ))}
         </div>
         <div className="row center-align">
-          <h5>Machine Learning Tools</h5>
+          <h5 className="teal-text">Machine Learning Tools</h5>
           <hr />
 
           {machineLearning.map(el => (
@@ -48,7 +51,7 @@ const About = () => {
                   src={el.img}
                 />
                 <div className="center promo promo-example">
-                  <a href={el.link}>
+                  <a href={el.link} target="_blank">
                     <p className="promo-caption">{el.name}</p>
                   </a>
                   <p className="light center"> {el.description}</p>
